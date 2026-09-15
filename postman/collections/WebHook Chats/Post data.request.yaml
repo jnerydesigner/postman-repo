@@ -3,11 +3,17 @@ description: |-
   This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.
 
   A successful POST request typically returns a `200 OK` or `201 Created` response code.
-url: https://chat.googleapis.com/v1/spaces/AAQAbtY8xuQ/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=sM43ufaxob9YuXPoOCliqz-mXClylBznrvla0HJnB4s
+url: https://chat.googleapis.com/v1/spaces/AAQAbtY8xuQ/messages?key={{GOOGLE_API_KEY}}&token={{GOOGLE_API_TOKEN}}
 method: POST
 queryParams:
-  key: AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI
-  token: sM43ufaxob9YuXPoOCliqz-mXClylBznrvla0HJnB4s
+  - key: key
+    value: "{{GOOGLE_API_KEY}}"
+    disabled: false
+    description: ""
+  - key: token
+    value: "{{GOOGLE_API_TOKEN}}"
+    disabled: false
+    description: ""
 body:
   type: json
   content: |-

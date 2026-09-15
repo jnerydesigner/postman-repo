@@ -1,9 +1,0 @@
-$kind: http-request
-url: "{{url_base}}/way2/parametros"
-method: GET
-auth:
-  type: bearer
-  credentials:
-    token: "{{token}}"
-settings: {}
-order: 3000
