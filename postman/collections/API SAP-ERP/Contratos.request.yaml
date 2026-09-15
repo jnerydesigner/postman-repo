@@ -1,7 +1,0 @@
-$kind: http-request
-url: "{{url_base}}/erp/v1/contratos/4600005382"
-method: GET
-headers:
-  Authorization: "{{type}} {{token}}"
-settings: {}
-order: 2000

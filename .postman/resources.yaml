@@ -1,15 +1,16 @@
 workspace:
   id: 99a9b008-1438-4dcc-8040-ade2977eaff8
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
 cloudResources:
   collections:
     ../postman/collections/POST DIRECTUS APP: 38967619-b6e5aa14-f3c1-49de-94c1-fa9d528ccc7b
     ../postman/collections/SENSEDIA: 38967619-28e20476-0e55-4576-b85c-eb559df4a52b
-    ../postman/collections/API SAP-ERP: 38967619-2f3591ed-9b99-4383-a05b-748092a89bd6
     ../postman/collections/PIM API: 38967619-14f22c4f-9b3f-44de-96b4-9bf0958fa66a
     ../postman/collections/WAY-2: 38967619-0c34846d-81b1-416a-85ed-e2fff005f3e3
     ../postman/collections/SPIC-DATALAKE: 38967619-ec162e9b-11ca-412e-9d83-2ebf65d0ef9e
     ../postman/collections/API documentation: 38967619-8beec151-473c-473e-85aa-c67ef8fdbb82
-    ../postman/collections/API SE Suite: 38967619-ad7d9703-7871-45c6-90f1-07d43088866f
     ../postman/collections/DirectusAPI: 38967619-9da3b518-baa2-489c-b1e4-1a714392b4fa
     ../postman/collections/NodeBase: 38967619-f9b2036d-a150-4def-aff5-84f840ed8828
     ../postman/collections/Jtech: 38967619-a48baa8b-f771-4628-9dba-ec986fbde550
