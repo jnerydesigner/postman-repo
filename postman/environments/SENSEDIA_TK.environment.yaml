@@ -22,4 +22,10 @@ values:
     value: ''
   - key: ACCESS_TOKEN_SAP
     value: ''
+  - key: BASIC_SAP
+    value: ''
+  - key: BASIC_SIGOM
+    value: ''
+  - key: BASIC_SE_SUITE
+    value: ''
 color: 0

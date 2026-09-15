@@ -1,8 +1,0 @@
-$kind: http-request
-url: https://api.spicbrasil.com.br/erp/v1/usuarios
-method: GET
-headers:
-  client_id: b384e532-40c3-435b-9670-f935d774535c
-  Authorization: Bearer YjM4NGU1MzItNDBjMy00MzViLTk2NzAtZjkzNWQ3NzQ1MzVjOjg0OGE0YjgxLTI2YjItNDM5ZC1iZDczLWQ3ODBjN2YyMmNlMw==
-settings: {}
-order: 7000
