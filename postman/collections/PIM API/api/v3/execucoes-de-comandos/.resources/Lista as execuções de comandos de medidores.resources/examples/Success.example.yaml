@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/execucoes-de-comandos?medidorid=5345&execucao-datainicio=1951-09-26T19:37:36.816Z&execucao-datafim=1951-09-26T19:37:36.816Z&execucao-temporelativo=MesPassado&execucao-hasvalue=true&skip=5345&take=5345&sortingproperty=ErroDeExecucaoDeComando&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    medidorid: "5345"
+    execucao-datainicio: 1951-09-26T19:37:36.816Z
+    execucao-datafim: 1951-09-26T19:37:36.816Z
+    execucao-temporelativo: MesPassado
+    execucao-hasvalue: "true"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: ErroDeExecucaoDeComando
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 9120,
+        "take": 6121,
+        "sorting": "string",
+        "rows": 9568,
+        "items": [
+          {
+            "id": 5578,
+            "agendamentoDeComandoId": 6657,
+            "medidorId": 9593,
+            "dataHora": "2021-01-29T13:45:30.675Z",
+            "status": 7670,
+            "statusRetorno": 8465,
+            "descricao": "string",
+            "descricaoStatusDeComando": "string",
+            "erroDeExecucaoDeComando": "string"
+          },
+          {
+            "id": 9793,
+            "agendamentoDeComandoId": 4783,
+            "medidorId": 5231,
+            "dataHora": "1976-11-04T22:12:31.049Z",
+            "status": 404,
+            "statusRetorno": 8617,
+            "descricao": "string",
+            "descricaoStatusDeComando": "string",
+            "erroDeExecucaoDeComando": "string"
+          }
+        ]
+      }
+order: 1000

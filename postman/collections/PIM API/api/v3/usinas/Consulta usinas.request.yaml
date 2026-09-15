@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/usinas?ceg=string&skip=5345&take=5345&sortingproperty=PontoLiquidaNome&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ceg: string
+  skip: "5345"
+  take: "5345"
+  sortingproperty: PontoLiquidaNome
+  sorting: Desc
+settings: {}
+examples: ./.resources/Consulta usinas.resources/examples
+order: 2000

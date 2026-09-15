@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/alarmes?criticidade=5345&pontoid=5345&reconhecido=true&alarmetipo=5345&tipopontonome=string&alarme-datainicio=1951-09-26T19:37:36.816Z&alarme-datafim=1951-09-26T19:37:36.816Z&alarme-temporelativo=MesPassado&alarme-hasvalue=true&skip=5345&take=5345&sortingproperty=PontoId&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    criticidade: "5345"
+    pontoid: "5345"
+    reconhecido: "true"
+    alarmetipo: "5345"
+    tipopontonome: string
+    alarme-datainicio: 1951-09-26T19:37:36.816Z
+    alarme-datafim: 1951-09-26T19:37:36.816Z
+    alarme-temporelativo: MesPassado
+    alarme-hasvalue: "true"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: PontoId
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "string",
+        "title": "string",
+        "status": 9109,
+        "detail": "string",
+        "instance": "string",
+        "key_0": 3725.827112444986,
+        "key_1": "string"
+      }
+order: 4000

@@ -1,0 +1,61 @@
+$kind: http-request
+url: http://localhost:8080/realms/spic-datalake-realm/protocol/openid-connect/token
+method: POST
+body:
+  type: urlencoded
+  content:
+    client_id: chatbot-backend-bff
+    grant_type: password
+    username: operations
+    password: "123456"
+    scope: openid profile email roles
+    client_secret: "{{secret_keycloack}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      const response = pm.response.json();
+
+      // salva access_token
+      pm.environment.set("access_token", response.access_token);
+
+      // salva refresh_token (opcional)
+      pm.environment.set("refresh_token", response.refresh_token);
+
+      // salva exp (opcional)
+      pm.environment.set("expires_in", response.expires_in);
+
+      // Tests
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response time is less than 2000ms", function () {
+          pm.expect(pm.response.responseTime).to.be.below(2000);
+      });
+
+      pm.test("Response has access_token", function () {
+          pm.expect(response.access_token).to.be.a("string").and.not.empty;
+      });
+
+      pm.test("Response has refresh_token", function () {
+          pm.expect(response.refresh_token).to.be.a("string").and.not.empty;
+      });
+
+      pm.test("Token type is Bearer", function () {
+          pm.expect(response.token_type).to.eql("Bearer");
+      });
+
+      pm.test("expires_in is a number", function () {
+          pm.expect(response.expires_in).to.be.a("number");
+      });
+
+      pm.test("Response has id_token", function () {
+          pm.expect(response.id_token).to.be.a("string").and.not.empty;
+      });
+
+      pm.test("Response has scope", function () {
+          pm.expect(response.scope).to.be.a("string").and.not.empty;
+      });
+    language: text/javascript
+settings: {}
+order: 5000

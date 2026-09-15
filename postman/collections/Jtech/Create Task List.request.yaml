@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:4444/tasks
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "title": "Arrumar o computador"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{authToken}}"
+settings: {}
+order: 6000

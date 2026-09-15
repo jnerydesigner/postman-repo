@@ -1,0 +1,19 @@
+$kind: http-request
+name: SAGER | mês passado (Marangatu e Panati)
+url: https://api.spicbrasil.com.br/way2/pontos?ids=5810,5767&grandezas=DematRec&contextodasdatas=ConsiderarDiaCheio&intervalo=TrintaMinutos&medicao-temporelativo=MesPassado
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ids: 5810,5767
+  grandezas: DematRec
+  contextodasdatas: ConsiderarDiaCheio
+  intervalo: TrintaMinutos
+  medicao-temporelativo: MesPassado
+settings:
+  disabledSystemHeaders:
+    - accept
+    - user-agent
+    - accept-encoding
+    - connection
+order: 2000

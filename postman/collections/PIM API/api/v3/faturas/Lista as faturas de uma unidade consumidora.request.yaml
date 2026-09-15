@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/faturas?pontonome=string&unidadeconsumidoranome=string&faturaautomatica=true&faturaconsolidada=true&possuialarmes=true&geracao-datainicio=1951-09-26T19:37:36.816Z&geracao-datafim=1951-09-26T19:37:36.816Z&geracao-temporelativo=MesPassado&geracao-hasvalue=true&fatura-datainicio=1951-09-26T19:37:36.816Z&fatura-datafim=1951-09-26T19:37:36.816Z&fatura-temporelativo=MesPassado&fatura-hasvalue=true&skip=5345&take=5345&sortingproperty=FaturaId&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  pontonome: string
+  unidadeconsumidoranome: string
+  faturaautomatica: "true"
+  faturaconsolidada: "true"
+  possuialarmes: "true"
+  geracao-datainicio: 1951-09-26T19:37:36.816Z
+  geracao-datafim: 1951-09-26T19:37:36.816Z
+  geracao-temporelativo: MesPassado
+  geracao-hasvalue: "true"
+  fatura-datainicio: 1951-09-26T19:37:36.816Z
+  fatura-datafim: 1951-09-26T19:37:36.816Z
+  fatura-temporelativo: MesPassado
+  fatura-hasvalue: "true"
+  skip: "5345"
+  take: "5345"
+  sortingproperty: FaturaId
+  sorting: Desc
+settings: {}
+examples: ./.resources/Lista as faturas de uma unidade consumidora.resources/examples
+order: 1000

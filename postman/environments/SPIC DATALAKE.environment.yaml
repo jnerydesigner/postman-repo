@@ -1,0 +1,60 @@
+name: SPIC DATALAKE
+color: null
+values:
+  - key: access_token
+    value: ""
+    enabled: true
+  - key: refresh_token
+    value: ""
+    enabled: true
+  - key: expires_in
+    value: ""
+    enabled: true
+  - key: token_type
+    value: Bearer
+    enabled: true
+  - key: id_token
+    value: ""
+    enabled: true
+  - key: refresh_expires_in
+    value: ""
+    enabled: true
+  - key: session_state
+    value: ""
+    enabled: true
+  - key: scope
+    value: ""
+    enabled: true
+  - key: url_bff
+    value: ""
+    enabled: true
+  - key: access_token_frontend
+    value: ""
+    enabled: true
+  - key: secret
+    value: ""
+    enabled: true
+  - key: url_base_keycloak
+    value: ""
+    enabled: true
+  - key: keycloak_realm
+    value: ""
+    enabled: true
+  - key: keycloak_metrics_client_id
+    value: ""
+    enabled: true
+  - key: keycloak_metrics_client_secret
+    value: ""
+    enabled: true
+  - key: ACCESS_TOKEN_METRICS
+    value: ""
+    enabled: true
+  - key: TOKEN
+    value: ""
+    enabled: true
+  - key: secret_keycloack
+    value: ""
+    enabled: true
+  - key: url_bff_certi
+    value: ""
+    enabled: true

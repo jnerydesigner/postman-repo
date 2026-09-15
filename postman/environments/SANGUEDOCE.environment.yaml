@@ -1,0 +1,12 @@
+name: SANGUEDOCE
+color: null
+values:
+  - key: TOKEN
+    value: ""
+    enabled: true
+  - key: API_URL
+    value: ""
+    enabled: true
+  - key: TOKEN_LINKEDIN
+    value: ""
+    enabled: true

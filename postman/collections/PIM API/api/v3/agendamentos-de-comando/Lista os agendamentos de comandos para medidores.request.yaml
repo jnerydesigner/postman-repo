@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/agendamentos-de-comando?skip=5345&take=5345&sortingproperty=UltimaExecucao&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  skip: "5345"
+  take: "5345"
+  sortingproperty: UltimaExecucao
+  sorting: Desc
+settings: {}
+examples: ./.resources/Lista os agendamentos de comandos para medidores.resources/examples
+order: 1000

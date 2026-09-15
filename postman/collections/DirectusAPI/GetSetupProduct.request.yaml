@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/setup_items?filter[slug][_eq]=fifine-gaming-pc-microfone-usb-microfone-condensador-para-podcast"
+method: GET
+queryParams:
+  filter[slug][_eq]: fifine-gaming-pc-microfone-usb-microfone-condensador-para-podcast
+settings: {}
+order: 9000

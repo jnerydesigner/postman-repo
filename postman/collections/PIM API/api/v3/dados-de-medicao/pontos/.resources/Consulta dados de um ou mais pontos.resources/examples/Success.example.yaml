@@ -1,0 +1,73 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/dados-de-medicao/pontos?ids=string&grandezas=string&contextodasdatas=ConsiderarMesCheio&intervalo=TrintaMinutos&aplicarhorariodeverao=true&separardadoscomcpsemcp=true&medicao-datainicio=1951-09-26T19:37:36.816Z&medicao-datafim=1951-09-26T19:37:36.816Z&medicao-temporelativo=MesPassado&medicao-hasvalue=true"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    ids: string
+    grandezas: string
+    contextodasdatas: ConsiderarMesCheio
+    intervalo: TrintaMinutos
+    aplicarhorariodeverao: "true"
+    separardadoscomcpsemcp: "true"
+    medicao-datainicio: 1951-09-26T19:37:36.816Z
+    medicao-datafim: 1951-09-26T19:37:36.816Z
+    medicao-temporelativo: MesPassado
+    medicao-hasvalue: "true"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "inicio": "1997-05-04T00:15:15.238Z",
+        "fim": "1994-08-19T03:29:10.164Z",
+        "dataInicio": "1965-03-10T14:03:46.167Z",
+        "dataFim": "2018-05-29T03:51:46.461Z",
+        "intervalo": "string",
+        "dados": [
+          {
+            "pontoId": 6701,
+            "ultimaColeta": "1981-04-06T07:12:09.743Z",
+            "nomeGrandeza": "string",
+            "valores": [
+              {
+                "data": "2009-03-26T07:15:32.926Z",
+                "valor": 2752.107944615172,
+                "qualidade": "Incompleto"
+              },
+              {
+                "data": "1957-01-15T04:03:42.518Z",
+                "valor": 7302.580406030464,
+                "qualidade": "OK"
+              }
+            ]
+          },
+          {
+            "pontoId": 320,
+            "ultimaColeta": "1981-01-02T04:27:20.073Z",
+            "nomeGrandeza": "string",
+            "valores": [
+              {
+                "data": "1983-02-20T14:29:06.706Z",
+                "valor": 3356.3989374980883,
+                "qualidade": "Lacuna"
+              },
+              {
+                "data": "2009-03-09T05:45:23.081Z",
+                "valor": 1440.8065324717522,
+                "qualidade": "TransicaoHorarioVerao"
+              }
+            ]
+          }
+        ]
+      }
+order: 1000

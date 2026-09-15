@@ -1,0 +1,111 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/medidores?numerodeserie=string&pasta=string&path=string&skip=5345&take=5345&sortingproperty=QuantidadeDeElementos&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    numerodeserie: string
+    pasta: string
+    path: string
+    skip: "5345"
+    take: "5345"
+    sortingproperty: QuantidadeDeElementos
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 9276,
+        "take": 5712,
+        "sorting": "string",
+        "rows": 467,
+        "items": [
+          {
+            "medidorId": 2544,
+            "nome": "string",
+            "descricao": "string",
+            "numeroDeSerie": "string",
+            "numeroInternoComDigito": "string",
+            "tipoPontoId": 7737,
+            "tipoPonto": "string",
+            "tipoMedidorId": 2550,
+            "tipoMedidor": "string",
+            "pontoId": 7149,
+            "pontoNome": "string",
+            "pasta": "string",
+            "path": "string",
+            "comunicacao": "string",
+            "codigoScde": "string",
+            "tags": [
+              {
+                "tagId": 4698,
+                "tagName": "string"
+              },
+              {
+                "tagId": 3722,
+                "tagName": "string"
+              }
+            ],
+            "grupoDeMedicaoId": 1427,
+            "numeradorRtp": 2925.955903956374,
+            "denominadorRtp": 3725.41979141046,
+            "relacaoRtp": 8136.81793561333,
+            "numeradorRtc": 375.3949586167371,
+            "denominadorRtc": 6883.901738967069,
+            "relacaoRtc": 4764.104648994938,
+            "tipoDeLigacao": 6626,
+            "quantidadeDeElementos": 656,
+            "ultimaColeta": "1954-09-04T01:17:15.414Z",
+            "parametrosDeComunicacao": "string"
+          },
+          {
+            "medidorId": 1542,
+            "nome": "string",
+            "descricao": "string",
+            "numeroDeSerie": "string",
+            "numeroInternoComDigito": "string",
+            "tipoPontoId": 9770,
+            "tipoPonto": "string",
+            "tipoMedidorId": 4879,
+            "tipoMedidor": "string",
+            "pontoId": 5209,
+            "pontoNome": "string",
+            "pasta": "string",
+            "path": "string",
+            "comunicacao": "string",
+            "codigoScde": "string",
+            "tags": [
+              {
+                "tagId": 3373,
+                "tagName": "string"
+              },
+              {
+                "tagId": 6026,
+                "tagName": "string"
+              }
+            ],
+            "grupoDeMedicaoId": 4952,
+            "numeradorRtp": 7946.758644280618,
+            "denominadorRtp": 3427.993798185118,
+            "relacaoRtp": 9659.642070644932,
+            "numeradorRtc": 9600.546799037877,
+            "denominadorRtc": 7406.318262509588,
+            "relacaoRtc": 3567.104756724675,
+            "tipoDeLigacao": 9762,
+            "quantidadeDeElementos": 291,
+            "ultimaColeta": "1975-03-06T23:44:10.881Z",
+            "parametrosDeComunicacao": "string"
+          }
+        ]
+      }
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+name: erp/v1/contratos/4600005382
+url: https://api.spicbrasil.com.br/erp/v1/contratos/4600005382
+method: GET
+headers:
+  Authorization: Bearer {{ACCESS_TOKEN_SAP}}
+auth:
+  type: bearer
+settings: {}
+order: 8000

@@ -1,0 +1,17 @@
+name: Globals
+values:
+  - key: url_base_way-2
+    value: ""
+    enabled: true
+  - key: token_way_2
+    value: ""
+    enabled: true
+  - key: access_token_way_2
+    value: ""
+    enabled: true
+  - key: token_type
+    value: ""
+    enabled: true
+  - key: expires_in
+    value: ""
+    enabled: true

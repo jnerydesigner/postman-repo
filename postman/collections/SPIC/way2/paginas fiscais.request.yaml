@@ -1,0 +1,21 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/way2/paginas-fiscais
+method: GET
+queryParams:
+  - key: skip
+    value: "0"
+    disabled: true
+  - key: take
+    value: "2"
+    disabled: true
+  - key: sortingproperty
+    value: Instante
+    disabled: true
+  - key: sorting
+    value: Desc
+    disabled: true
+  - key: medicao-temporelativo
+    value: MesPassado
+    disabled: true
+settings: {}
+order: 4000

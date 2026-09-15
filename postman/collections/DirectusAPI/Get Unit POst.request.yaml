@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/post?filter[slug][_eq]=meu-post-completo&fields=*,blog.blog_id.*,post_author.author_id.*,post_author.author_id.author_social_medias.*,post_author.author_id.author_social_medias.social_media_id.*"
+method: GET
+queryParams:
+  filter[slug][_eq]: meu-post-completo
+  fields: "*,blog.blog_id.*,post_author.author_id.*,post_author.author_id.author_social_medias.*,post_author.author_id.author_social_medias.social_media_id.*"
+settings: {}
+order: 3000

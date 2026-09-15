@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/dados-de-medicao/paginasfiscais?numerodeserie=string&unidadeconsumidora=string&medicao-datainicio=1951-09-26T19:37:36.816Z&medicao-datafim=1951-09-26T19:37:36.816Z&medicao-temporelativo=MesPassado&medicao-hasvalue=true&ultimaleitura=true&skip=5345&take=5345&sortingproperty=NumeroDeSerie&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  numerodeserie: string
+  unidadeconsumidora: string
+  medicao-datainicio: 1951-09-26T19:37:36.816Z
+  medicao-datafim: 1951-09-26T19:37:36.816Z
+  medicao-temporelativo: MesPassado
+  medicao-hasvalue: "true"
+  ultimaleitura: "true"
+  skip: "5345"
+  take: "5345"
+  sortingproperty: NumeroDeSerie
+  sorting: Desc
+settings: {}
+examples: ./.resources/Consulta dados de páginas fiscais.resources/examples
+order: 1000

@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://api-dev.spicbrasil.com.br/se-suite/v1/documentos/downloads
+method: POST
+headers:
+  Accept: "*/*"
+  Connection: keep-alive
+  Content-Type: application/json
+  Authorization: Bearer {{access_token}}
+body:
+  type: json
+  content: "{\r
+
+    \    \"idDocumento\": \"ADM DOC-001\"\r
+
+    }"
+settings: {}
+order: 2000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/collections"
+method: GET
+settings: {}
+order: 4000

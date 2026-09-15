@@ -1,0 +1,29 @@
+$kind: http-request
+url: http://localhost:8080/realms/spic-datalake-realm/protocol/openid-connect/token/introspect
+method: POST
+queryParams:
+  - key: client_id
+    value: chatbot-backend-bff
+    disabled: true
+  - key: client_secret
+    value: Y2hhdC1zcGljLWtlY2xvYWstc2VjcmV0
+    disabled: true
+  - key: token
+    value: "{{access_token}}"
+    disabled: true
+body:
+  type: urlencoded
+  content:
+    - key: client_id
+      value: chatbot-backend-bff
+    - key: client_secret
+      value: Y2hhdC1zcGljLWtlY2xvYWstc2VjcmV0
+    - key: token
+      value: "{{access_token}}"
+      disabled: true
+    - key: token
+      value: oOJi1w6i59t9FrBiiGPjfGHTW5U7XNjLV8BRJXopLlOgWcBQrLloEjulDeVym92j2HCOec6y86ArW_01Q0LD1mVElPrzSb0TXG836eebK-rcj1C5fneQAYIWeq1AWITUgk48h4O1oRe9KTHQq74DGUW0TrO50SnLyNgmeEywigCnxMo-VbbNcqNw1671-_8W5jkIwRKjT77HbBrQtksMM1MWj9YYHXRREFx4OExuq8yv1qMuGA6EuE_RQ_-HaXYLd7wvAIi8CID2P1r4bLk5kVOx2vbFG8SL4b393XafSAnTP5py7_m8Ghw8l7prWXg
+auth:
+  type: noauth
+settings: {}
+order: 9000

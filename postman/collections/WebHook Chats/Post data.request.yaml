@@ -1,0 +1,57 @@
+$kind: http-request
+description: |-
+  This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.
+
+  A successful POST request typically returns a `200 OK` or `201 Created` response code.
+url: https://chat.googleapis.com/v1/spaces/AAQAbtY8xuQ/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=sM43ufaxob9YuXPoOCliqz-mXClylBznrvla0HJnB4s
+method: POST
+queryParams:
+  key: AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI
+  token: sM43ufaxob9YuXPoOCliqz-mXClylBznrvla0HJnB4s
+body:
+  type: json
+  content: |-
+    {
+      "cardsV2": [
+        {
+          "cardId": "notificacao_card",
+          "card": {
+            "header": {
+              "title": "SPIC Data Lake",
+              "subtitle": "Pipeline de Dados - SPIC",
+              "imageType": "CIRCLE"
+            },
+            "sections": [
+              {
+                "header": "Detalhes do Evento",
+                "widgets": [
+                  {
+                    "decoratedText": {
+                      "topLabel": "Status",
+                      "text": "<font color=\"#006EB8\"><b>BUILD EXECUTADO COM SUCESSO</b></font>",
+                      "startIcon": {
+                        "knownIcon": "DESCRIPTION"
+                      }
+                    }
+                  },
+                  {
+                    "decoratedText": {
+                      "topLabel": "Build PR",
+                      "text": "DEVELOP"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Successful POST request", function () {
+          pm.expect(pm.response.code).to.be.oneOf([200, 201]);
+      });
+    language: text/javascript
+order: 2000

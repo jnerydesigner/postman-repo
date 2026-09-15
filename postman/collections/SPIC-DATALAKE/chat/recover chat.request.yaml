@@ -1,0 +1,9 @@
+$kind: http-request
+url: http://localhost:4442/chat/9d6e62fa-c450-4b6e-b477-fde85b5f42fe/recover-messages
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{access_token}}"
+settings: {}
+order: 3000

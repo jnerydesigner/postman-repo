@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/alarmes?criticidade=5345&pontoid=5345&reconhecido=true&alarmetipo=5345&tipopontonome=string&alarme-datainicio=1951-09-26T19:37:36.816Z&alarme-datafim=1951-09-26T19:37:36.816Z&alarme-temporelativo=MesPassado&alarme-hasvalue=true&skip=5345&take=5345&sortingproperty=PontoId&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  criticidade: "5345"
+  pontoid: "5345"
+  reconhecido: "true"
+  alarmetipo: "5345"
+  tipopontonome: string
+  alarme-datainicio: 1951-09-26T19:37:36.816Z
+  alarme-datafim: 1951-09-26T19:37:36.816Z
+  alarme-temporelativo: MesPassado
+  alarme-hasvalue: "true"
+  skip: "5345"
+  take: "5345"
+  sortingproperty: PontoId
+  sorting: Desc
+settings: {}
+examples: ./.resources/Consulta alarmes de medidores e pontos.resources/examples
+order: 1000

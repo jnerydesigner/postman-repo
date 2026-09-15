@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:4444/tasks
+method: GET
+auth:
+  type: noauth
+settings: {}
+order: 8000

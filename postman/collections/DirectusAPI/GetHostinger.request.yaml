@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/Hostinger?fields=*,hostinger_description.*,hostinger_description.HostingerDescription_id.*,hostinger_discount_description.*,hostinger_discount_description.HostingerDiscountDescription_id.*"
+method: GET
+queryParams:
+  fields: "*,hostinger_description.*,hostinger_description.HostingerDescription_id.*,hostinger_discount_description.*,hostinger_discount_description.HostingerDiscountDescription_id.*"
+settings: {}
+order: 5000

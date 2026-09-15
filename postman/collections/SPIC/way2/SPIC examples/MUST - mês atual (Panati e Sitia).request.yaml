@@ -1,0 +1,19 @@
+$kind: http-request
+name: MUST | mês atual (Panati e Sitia)
+url: https://api.spicbrasil.com.br/way2/pontos?ids=5970,5973,5974,5971,5969,5972,5976,5975&grandezas=Demat&contextodasdatas=ConsiderarMesCheio&intervalo=QuinzeMinutos&medicao-temporelativo=EsteMes
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ids: 5970,5973,5974,5971,5969,5972,5976,5975
+  grandezas: Demat
+  contextodasdatas: ConsiderarMesCheio
+  intervalo: QuinzeMinutos
+  medicao-temporelativo: EsteMes
+settings:
+  disabledSystemHeaders:
+    - accept
+    - user-agent
+    - accept-encoding
+    - connection
+order: 5000

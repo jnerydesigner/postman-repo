@@ -1,0 +1,52 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/usinas/:id"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "usinaId": 4593,
+        "nome": "string",
+        "usinaTipo": "Eolica",
+        "descricao": "string",
+        "entradaEmOperacao": "2025-04-10T23:39:29.512Z",
+        "pontoLiquidaId": 8876,
+        "pontoLiquidaNome": "string",
+        "pontoGeracaoRecordId": 964,
+        "pontoGeracaoRecordNome": "string",
+        "garantiaFisicaMWMedio": 6862.169271725651,
+        "geracaoRecord": 4812.882538169399,
+        "dataHoraGeracaoRecord": "2014-02-27T23:02:56.051Z",
+        "ceg": "string",
+        "consumoInterno": 398.3867646129591,
+        "perdasEletricas": 699.1031248777624,
+        "teif": 546.262774515327,
+        "indisponibilidadeProgramada": 2288.2523124261065,
+        "energiaAssegurada": [
+          {
+            "diaInicio": "2006-05-29T18:00:08.785Z",
+            "diaFim": "1966-12-10T03:58:37.641Z",
+            "mwMedio": 949.3850673765091
+          },
+          {
+            "diaInicio": "1951-11-01T02:13:13.799Z",
+            "diaFim": "2002-01-06T22:12:04.473Z",
+            "mwMedio": 3592.969803695576
+          }
+        ]
+      }
+order: 1000

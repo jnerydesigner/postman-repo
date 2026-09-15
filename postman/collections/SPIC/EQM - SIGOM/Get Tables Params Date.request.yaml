@@ -1,0 +1,38 @@
+$kind: http-request
+url: "{{URL_BASE}}/eqmdata/v1/bi_inspecao/datefiltering"
+method: POST
+headers:
+  - key: Authorization
+    value: Bearer {{ACCESS_TOKEN_SIGOM}}
+  - key: initialDate
+    value: 2022-01-01
+  - key: finalDate
+    value: 2022-01-31
+  - key: dateField
+    value: data_extracao
+  - key: Content-Type
+    value: application/json
+  - key: Cookie
+    value: 1a4f7b581ef461bc9f6f575cb985425b=15672195970ac7377e3e12b7b78131e8; SAP_SESSIONID_ECD_500=5Ff3pyHxIqvuEFdLLWq8hiLDAll1VxHxriYR0q2QSjs%3d; sap-usercontext=sap-client=500
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+        "fieldNames":"*"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+      const count = jsonData.length;
+
+      console.log("Total de tabelas retornadas: " + count);
+
+      pm.test("Total de tabelas retornadas: " + count, function () {
+          pm.expect(jsonData).to.be.an('array');
+          pm.expect(count).to.be.above(0);
+      });
+    language: text/javascript
+settings: {}
+order: 9000

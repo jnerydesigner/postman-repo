@@ -1,0 +1,19 @@
+$kind: http-request
+name: MUST | mês atual (Marangatu)
+url: https://api.spicbrasil.com.br/way2/pontos?ids=5957,5958,5959,5965,5963,5964,5961,5966,5967,5968,5962,5960&grandezas=Demat&contextodasdatas=ConsiderarMesCheio&intervalo=QuinzeMinutos&medicao-temporelativo=EsteMes
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ids: 5957,5958,5959,5965,5963,5964,5961,5966,5967,5968,5962,5960
+  grandezas: Demat
+  contextodasdatas: ConsiderarMesCheio
+  intervalo: QuinzeMinutos
+  medicao-temporelativo: EsteMes
+settings:
+  disabledSystemHeaders:
+    - accept
+    - user-agent
+    - accept-encoding
+    - connection
+order: 3000

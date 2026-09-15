@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/HostingerPage?fields=*,HostingerPageHotingerObject.*,HostingerPageHotingerObject.Hostinger_id.*,HostingerPageHotingerObject.Hostinger_id.hostinger_description.*,HostingerPageHotingerObject.Hostinger_id.hostinger_description.HostingerDescription_id.*,HostingerPageHotingerObject.Hostinger_id.hostinger_discount_description.*,HostingerPageHotingerObject.Hostinger_id.hostinger_discount_description.HostingerDiscountDescription_id.*&filter[slug][_eq]=hostinger"
+method: GET
+queryParams:
+  fields: "*,HostingerPageHotingerObject.*,HostingerPageHotingerObject.Hostinger_id.*,HostingerPageHotingerObject.Hostinger_id.hostinger_description.*,HostingerPageHotingerObject.Hostinger_id.hostinger_description.HostingerDescription_id.*,HostingerPageHotingerObject.Hostinger_id.hostinger_discount_description.*,HostingerPageHotingerObject.Hostinger_id.hostinger_discount_description.HostingerDiscountDescription_id.*"
+  filter[slug][_eq]: hostinger
+settings: {}
+order: 10000

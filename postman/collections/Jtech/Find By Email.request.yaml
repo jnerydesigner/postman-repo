@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:4444/users?email=jander@email.com
+method: GET
+queryParams:
+  email: jander@email.com
+body:
+  type: json
+  content: |-
+    {
+        "name": "Jander Nery",
+        "email": "jander@email.com",
+        "password": "123456"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{authToken}}"
+settings: {}
+order: 2000

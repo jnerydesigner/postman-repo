@@ -1,0 +1,35 @@
+$kind: http-request
+url: "{{URL_BASE}}/rfc-oauth/v1/access-token"
+method: POST
+headers:
+  authorization: Basic YjM4NGU1MzItNDBjMy00MzViLTk2NzAtZjkzNWQ3NzQ1MzVjOmNiNmFiZWEwLTk1NjItNGFkMy1hN2Q3LWJjZTljZTM0OTQ5MA==
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    grant_type: client_credentials
+scripts:
+  - type: afterResponse
+    code: |+
+      const response = pm.response.json();
+
+      // salva access_token
+      pm.environment.set("ACCESS_TOKEN_SAP", response.access_token);
+
+      // Tests
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response has access_token", function () {
+          pm.expect(response.access_token).to.be.a("string").and.not.empty;
+      });
+
+      pm.test("ACCESS_TOKEN saved correctly in environment", function () {
+          const saved = pm.environment.get("ACCESS_TOKEN");
+          pm.expect(saved).to.eql(response.access_token);
+      });
+
+    language: text/javascript
+settings: {}
+order: 6000

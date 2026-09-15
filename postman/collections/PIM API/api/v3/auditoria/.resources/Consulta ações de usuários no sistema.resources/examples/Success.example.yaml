@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/auditoria?usuarioemail=string&usuariologin=string&operacao=Alterar&auditoria-datainicio=1951-09-26T19:37:36.816Z&auditoria-datafim=1951-09-26T19:37:36.816Z&auditoria-temporelativo=MesPassado&auditoria-hasvalue=true&skip=5345&take=5345&sortingproperty=DataHora&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    usuarioemail: string
+    usuariologin: string
+    operacao: Alterar
+    auditoria-datainicio: 1951-09-26T19:37:36.816Z
+    auditoria-datafim: 1951-09-26T19:37:36.816Z
+    auditoria-temporelativo: MesPassado
+    auditoria-hasvalue: "true"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: DataHora
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 9256,
+        "take": 6351,
+        "sorting": "string",
+        "rows": 2999,
+        "items": [
+          {
+            "dataHora": "1992-03-05T04:28:41.621Z",
+            "usuarioNome": "string",
+            "usuarioLogin": "string",
+            "usuarioEmail": "string",
+            "entidade": "string",
+            "operacao": "Remover",
+            "enderecoIP": "string",
+            "descricao": "string"
+          },
+          {
+            "dataHora": "2017-02-28T09:31:39.979Z",
+            "usuarioNome": "string",
+            "usuarioLogin": "string",
+            "usuarioEmail": "string",
+            "entidade": "string",
+            "operacao": "Visualizar",
+            "enderecoIP": "string",
+            "descricao": "string"
+          }
+        ]
+      }
+order: 1000

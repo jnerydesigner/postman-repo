@@ -1,0 +1,16 @@
+$kind: collection
+description: "Esta é a API para acesso aos dados do PIM.\r
+
+  Para autenticação, você deve adicionar seu token de acesso a um cabeçalho chamado 'Pim-Auth' em todos os requests.\r
+
+  Caso você não possua um token, entre em contato com o administrador do sistema."
+variables:
+  baseUrl: /
+auth:
+  - id: 304d968e-81e8-413d-8da0-31db2c950c63
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: PIM-Auth
+      value: "{{apiKey}}"
+      in: header

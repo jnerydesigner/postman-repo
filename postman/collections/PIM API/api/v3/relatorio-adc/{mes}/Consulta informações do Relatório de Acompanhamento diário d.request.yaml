@@ -1,0 +1,11 @@
+$kind: http-request
+name: Consulta informações do Relatório de Acompanhamento diário da Carga
+url: "{{baseUrl}}/api/v3/relatorio-adc/:mes"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  mes: 1951-09-26T19:37:36.816Z
+settings: {}
+examples: ./.resources/Consulta informações do Relatório de Acompanhamento diário d.resources/examples
+order: 1000

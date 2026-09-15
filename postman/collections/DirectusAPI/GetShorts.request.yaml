@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/shorts?sort=date_created"
+method: GET
+queryParams:
+  sort: date_created
+settings: {}
+order: 7000

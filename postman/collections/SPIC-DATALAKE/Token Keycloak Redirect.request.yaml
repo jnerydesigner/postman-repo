@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:8080/realms/spic-datalake-realm/protocol/openid-connect/token
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: client_id
+      value: chatbot-frontend-login
+    - key: grant_type
+      value: authorization_code
+    - key: code
+      value: administrador
+    - key: redirect_uri
+      value: http://localhost:3005
+    - key: scope
+      value: openid profile email roles
+      disabled: true
+settings: {}
+order: 7000

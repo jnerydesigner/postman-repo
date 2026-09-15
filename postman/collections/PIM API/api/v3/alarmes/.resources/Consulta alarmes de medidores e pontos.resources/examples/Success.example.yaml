@@ -1,0 +1,83 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/alarmes?criticidade=5345&pontoid=5345&reconhecido=true&alarmetipo=5345&tipopontonome=string&alarme-datainicio=1951-09-26T19:37:36.816Z&alarme-datafim=1951-09-26T19:37:36.816Z&alarme-temporelativo=MesPassado&alarme-hasvalue=true&skip=5345&take=5345&sortingproperty=PontoId&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    criticidade: "5345"
+    pontoid: "5345"
+    reconhecido: "true"
+    alarmetipo: "5345"
+    tipopontonome: string
+    alarme-datainicio: 1951-09-26T19:37:36.816Z
+    alarme-datafim: 1951-09-26T19:37:36.816Z
+    alarme-temporelativo: MesPassado
+    alarme-hasvalue: "true"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: PontoId
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 9143,
+        "take": 8020,
+        "sorting": "string",
+        "rows": 545,
+        "items": [
+          {
+            "alarmeId": 8848,
+            "usuarioId": 83,
+            "medidorId": 884,
+            "pontoId": 8091,
+            "pontoNome": "string",
+            "tipoPontoId": 3966,
+            "tipoPontoNome": "string",
+            "tipoMedidorId": 9835,
+            "tags": "string",
+            "alarmeTipo": 8615,
+            "alarmeTipoNome": "string",
+            "dataHora": "1954-10-22T07:13:19.775Z",
+            "dataHoraInicio": "2015-06-05T11:49:56.675Z",
+            "dataHoraFim": "2013-12-13T10:50:32.005Z",
+            "dataHoraReconhecimento": "2007-01-13T05:24:57.915Z",
+            "criticidade": 2157,
+            "reconhecido": true,
+            "descricao": "string",
+            "justificativa": "string"
+          },
+          {
+            "alarmeId": 7309,
+            "usuarioId": 6150,
+            "medidorId": 9715,
+            "pontoId": 930,
+            "pontoNome": "string",
+            "tipoPontoId": 4691,
+            "tipoPontoNome": "string",
+            "tipoMedidorId": 5188,
+            "tags": "string",
+            "alarmeTipo": 2289,
+            "alarmeTipoNome": "string",
+            "dataHora": "1953-01-08T05:54:02.106Z",
+            "dataHoraInicio": "1963-04-24T19:17:44.807Z",
+            "dataHoraFim": "1979-12-20T23:55:39.545Z",
+            "dataHoraReconhecimento": "2024-09-25T08:28:15.325Z",
+            "criticidade": 2456,
+            "reconhecido": false,
+            "descricao": "string",
+            "justificativa": "string"
+          }
+        ]
+      }
+order: 1000

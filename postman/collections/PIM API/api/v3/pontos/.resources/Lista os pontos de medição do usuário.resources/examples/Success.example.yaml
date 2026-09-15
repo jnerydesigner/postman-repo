@@ -1,0 +1,98 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/pontos?pontoid=5345&tipocoletacceeid=5345&nome=string&tipo=string&pasta=string&path=string&ultimacoleta-datainicio=1951-09-26T19:37:36.816Z&ultimacoleta-datafim=1951-09-26T19:37:36.816Z&ultimacoleta-temporelativo=MesPassado&ultimacoleta-hasvalue=true&skip=5345&take=5345&sortingproperty=RGExportacaoUE&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    pontoid: "5345"
+    tipocoletacceeid: "5345"
+    nome: string
+    tipo: string
+    pasta: string
+    path: string
+    ultimacoleta-datainicio: 1951-09-26T19:37:36.816Z
+    ultimacoleta-datafim: 1951-09-26T19:37:36.816Z
+    ultimacoleta-temporelativo: MesPassado
+    ultimacoleta-hasvalue: "true"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: RGExportacaoUE
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 9563,
+        "take": 2684,
+        "sorting": "string",
+        "rows": 2335,
+        "items": [
+          {
+            "pontoId": 3780,
+            "nome": "string",
+            "descricao": "string",
+            "codigoSCDE": "string",
+            "tensaoMedicao": 2346.051444942987,
+            "tipoId": 6340,
+            "tipo": "string",
+            "pasta": "string",
+            "path": "string",
+            "numeroUnidadeConsumidora": "string",
+            "unidadeConsumidora": "string",
+            "latitude": 7599.521752630185,
+            "longitude": 4928.06793185439,
+            "ultimaColeta": "1974-05-03T08:51:39.374Z",
+            "virtual": true,
+            "grupoDeMedicaoId": 372,
+            "energiaDelRec": "string",
+            "consumoPonta": 7046.674917694693,
+            "consumoForaPonta": 7684.736239622598,
+            "geracaoPonta": 2205.4784654433156,
+            "geracaoForaPonta": 5045.704864535892,
+            "rgExportacaoUE": "string",
+            "subestacao": "string",
+            "tipoColetaCceeId": 9921,
+            "perfilAgenteCceeId": 9065,
+            "comCPCalculada": true
+          },
+          {
+            "pontoId": 1479,
+            "nome": "string",
+            "descricao": "string",
+            "codigoSCDE": "string",
+            "tensaoMedicao": 3881.2742522157364,
+            "tipoId": 9332,
+            "tipo": "string",
+            "pasta": "string",
+            "path": "string",
+            "numeroUnidadeConsumidora": "string",
+            "unidadeConsumidora": "string",
+            "latitude": 8358.44881592491,
+            "longitude": 2715.8008661150657,
+            "ultimaColeta": "2005-03-05T00:31:41.053Z",
+            "virtual": true,
+            "grupoDeMedicaoId": 9680,
+            "energiaDelRec": "string",
+            "consumoPonta": 5837.3669692137755,
+            "consumoForaPonta": 5469.685969838382,
+            "geracaoPonta": 2314.702668160864,
+            "geracaoForaPonta": 2876.613339750258,
+            "rgExportacaoUE": "string",
+            "subestacao": "string",
+            "tipoColetaCceeId": 4005,
+            "perfilAgenteCceeId": 8099,
+            "comCPCalculada": false
+          }
+        ]
+      }
+order: 1000

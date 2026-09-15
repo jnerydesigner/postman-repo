@@ -1,0 +1,20 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/way2/medidores?grandezas=DematRec&intervalo=UmaHora&medicao-temporelativo=Ontem&numerosdeserie=MW-2411A320-02
+method: GET
+queryParams:
+  - key: grandezas
+    value: DematRec
+  - key: contextodasdatas
+    value: ConsiderarDiaCheio
+    disabled: true
+  - key: intervalo
+    value: UmaHora
+  - key: medicao-temporelativo
+    value: Ontem
+  - key: medicao-hasvalue
+    value: "true"
+    disabled: true
+  - key: numerosdeserie
+    value: MW-2411A320-02
+settings: {}
+order: 2000

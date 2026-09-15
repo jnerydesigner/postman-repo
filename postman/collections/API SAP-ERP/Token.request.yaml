@@ -1,0 +1,46 @@
+$kind: http-request
+url: "{{url_base}}/rfc-oauth/v1/access-token"
+method: POST
+headers:
+  authorization: Basic YjM4NGU1MzItNDBjMy00MzViLTk2NzAtZjkzNWQ3NzQ1MzVjOmNiNmFiZWEwLTk1NjItNGFkMy1hN2Q3LWJjZTljZTM0OTQ5MA==
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    grant_type: client_credentials
+scripts:
+  - type: afterResponse
+    code: |
+      const response = pm.response.json();
+
+
+      pm.environment.set("token", response.access_token);
+
+      pm.environment.set("type", response.token_type);
+
+
+      pm.environment.set("expires", response.expires_in);
+
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response time is less than 2000ms", function () {
+          pm.expect(pm.response.responseTime).to.be.below(2000);
+      });
+
+      pm.test("Response has access_token", function () {
+          pm.expect(response.access_token).to.be.a("string").and.not.empty;
+      });
+
+
+      pm.test("Token type is Bearer", function () {
+          pm.expect(response.token_type).to.eql("Bearer");
+      });
+
+      pm.test("expires_in is a number", function () {
+          pm.expect(response.expires_in).to.be.a("number");
+      });
+    language: text/javascript
+settings: {}
+order: 1000

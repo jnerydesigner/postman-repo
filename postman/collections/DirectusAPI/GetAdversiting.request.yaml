@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/advertising"
+method: GET
+settings: {}
+order: 13000

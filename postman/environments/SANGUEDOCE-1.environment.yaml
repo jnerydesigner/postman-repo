@@ -1,0 +1,6 @@
+name: SANGUEDOCE
+color: null
+values:
+  - key: TOKEN
+    value: ""
+    enabled: true

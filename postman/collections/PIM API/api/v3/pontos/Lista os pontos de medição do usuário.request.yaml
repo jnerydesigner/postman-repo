@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/pontos?pontoid=5345&tipocoletacceeid=5345&nome=string&tipo=string&pasta=string&path=string&ultimacoleta-datainicio=1951-09-26T19:37:36.816Z&ultimacoleta-datafim=1951-09-26T19:37:36.816Z&ultimacoleta-temporelativo=MesPassado&ultimacoleta-hasvalue=true&skip=5345&take=5345&sortingproperty=RGExportacaoUE&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  pontoid: "5345"
+  tipocoletacceeid: "5345"
+  nome: string
+  tipo: string
+  pasta: string
+  path: string
+  ultimacoleta-datainicio: 1951-09-26T19:37:36.816Z
+  ultimacoleta-datafim: 1951-09-26T19:37:36.816Z
+  ultimacoleta-temporelativo: MesPassado
+  ultimacoleta-hasvalue: "true"
+  skip: "5345"
+  take: "5345"
+  sortingproperty: RGExportacaoUE
+  sorting: Desc
+settings: {}
+examples: ./.resources/Lista os pontos de medição do usuário.resources/examples
+order: 1000

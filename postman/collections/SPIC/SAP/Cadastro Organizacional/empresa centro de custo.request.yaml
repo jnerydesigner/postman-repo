@@ -1,0 +1,14 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/erp/v1/empresas/centros-custo
+method: GET
+headers:
+  Authorization: Bearer {{ACCESS_TOKEN_SAP}}
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+      const centrosCustoLN = jsonData.centrosCusto.length;
+      console.log("Quantidade de Centro de Custo "+ centrosCustoLN)
+    language: text/javascript
+settings: {}
+order: 1000

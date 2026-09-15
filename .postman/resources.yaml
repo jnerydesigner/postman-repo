@@ -1,0 +1,28 @@
+workspace:
+  id: 99a9b008-1438-4dcc-8040-ade2977eaff8
+cloudResources:
+  collections:
+    ../postman/collections/POST DIRECTUS APP: 38967619-b6e5aa14-f3c1-49de-94c1-fa9d528ccc7b
+    ../postman/collections/SENSEDIA: 38967619-28e20476-0e55-4576-b85c-eb559df4a52b
+    ../postman/collections/API SAP-ERP: 38967619-2f3591ed-9b99-4383-a05b-748092a89bd6
+    ../postman/collections/PIM API: 38967619-14f22c4f-9b3f-44de-96b4-9bf0958fa66a
+    ../postman/collections/WAY-2: 38967619-0c34846d-81b1-416a-85ed-e2fff005f3e3
+    ../postman/collections/SPIC-DATALAKE: 38967619-ec162e9b-11ca-412e-9d83-2ebf65d0ef9e
+    ../postman/collections/API documentation: 38967619-8beec151-473c-473e-85aa-c67ef8fdbb82
+    ../postman/collections/API SE Suite: 38967619-ad7d9703-7871-45c6-90f1-07d43088866f
+    ../postman/collections/DirectusAPI: 38967619-9da3b518-baa2-489c-b1e4-1a714392b4fa
+    ../postman/collections/NodeBase: 38967619-f9b2036d-a150-4def-aff5-84f840ed8828
+    ../postman/collections/Jtech: 38967619-a48baa8b-f771-4628-9dba-ec986fbde550
+    ../postman/collections/SPIC: 38967619-09dafdcd-9886-4951-945e-a6eea0c3b52b
+    ../postman/collections/WebHook Chats: 38967619-a449e713-9bf6-4cfa-b79c-77618d56bf2a
+  environments:
+    ../postman/environments/Sendedia.environment.yaml: 38967619-030014b1-8652-4392-9e36-bcb6994ff17e
+    ../postman/environments/SPIC DATALAKE.environment.yaml: 38967619-1cddf1b1-8209-42ed-8a83-197826444c08
+    ../postman/environments/WAY2.environment.yaml: 38967619-2c4b9b56-5f12-4438-ab40-e2ab1dad555e
+    ../postman/environments/Jtech.environment.yaml: 38967619-6a30e07f-9344-47fc-ae48-1d4056a40c4a
+    ../postman/environments/SENSEDIA_TK.environment.yaml: 38967619-7d32e9ba-559b-4bc3-b911-80a341017ec3
+    ../postman/environments/SANGUEDOCE.environment.yaml: 38967619-9a43d865-452c-49f7-bdf0-2737cc7c0fc3
+    ../postman/environments/Directus.environment.yaml: 38967619-9b94173b-8453-4c0c-8174-ac20e68a46e0
+    ../postman/environments/SANGUEDOCE-1.environment.yaml: 38967619-eb70584d-41d8-4246-8fc6-bd8a3c691da4
+  globals:
+    ../postman/globals/workspace.globals.yaml: bd1770fe-581b-4dd9-84ad-1dd6923604f2

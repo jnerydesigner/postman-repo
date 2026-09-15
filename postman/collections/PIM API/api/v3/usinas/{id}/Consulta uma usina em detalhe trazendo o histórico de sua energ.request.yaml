@@ -1,0 +1,11 @@
+$kind: http-request
+name: Consulta uma usina em detalhe trazendo o histórico de sua energia assegurada
+url: "{{baseUrl}}/api/v3/usinas/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  id: "5345"
+settings: {}
+examples: ./.resources/Consulta uma usina em detalhe trazendo o histórico de sua energ.resources/examples
+order: 1000

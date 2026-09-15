@@ -1,0 +1,13 @@
+$kind: http-request
+url: url
+method: POST
+body:
+  type: urlencoded
+  content:
+    client_id: chatbot-backend-bff
+    grant_type: password
+    username: administrador
+    password: "123456"
+    scope: openid profile email roles
+settings: {}
+order: 6000

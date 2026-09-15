@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/perfis-agentes-ccee?tipocoletaccee=5345&skip=5345&take=5345&sortingproperty=Usuario&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  tipocoletaccee: "5345"
+  skip: "5345"
+  take: "5345"
+  sortingproperty: Usuario
+  sorting: Desc
+settings: {}
+examples: ./.resources/Lista os perfis de agentes CCEE.resources/examples
+order: 1000

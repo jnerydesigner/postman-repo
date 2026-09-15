@@ -1,0 +1,27 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/se-suite/v1/documentos/consultas
+method: POST
+body:
+  type: urlencoded
+  content:
+    grant_type: client_credentials
+auth:
+  type: bearer
+  credentials:
+    token: "{{ACCESS_TOKEN_SE_SUITE}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      const response = pm.response.json();
+      console.log(response.length)
+      const verArquivo = response.find(file => file.idDocumento === "002 SIG000001")
+
+      if(verArquivo){
+          console.log("Encontrou")
+          console.log(JSON.stringify(verArquivo))
+      }
+
+      // salva access_token
+    language: text/javascript
+settings: {}
+order: 3000

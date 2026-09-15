@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/experience"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "company": "PROSAM – Programas Sociais da Amazônia",
+      "position": "Desenvolvedor Web Pleno",
+      "technologies": "PHP, MySQL, HTML, JavaScript, Laravel",
+      "admission": "2010-06-01T15:42:14.801Z",
+      "resignation": "2017-10-01T15:42:14.801Z",
+      "current_job": false
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+settings: {}
+order: 14000

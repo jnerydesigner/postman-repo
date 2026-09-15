@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/perfis-agentes-ccee?tipocoletaccee=5345&skip=5345&take=5345&sortingproperty=Usuario&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    tipocoletaccee: "5345"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: Usuario
+    sorting: Desc
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "string",
+        "title": "string",
+        "status": 9109,
+        "detail": "string",
+        "instance": "string",
+        "key_0": 3725.827112444986,
+        "key_1": "string"
+      }
+order: 2000

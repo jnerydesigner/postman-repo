@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/se-suite/v1/documentos/downloads
+method: POST
+headers:
+  Authorization: Bearer {{TOKEN_SE_SUITE}}
+body:
+  type: json
+  content: |-
+    {
+      "idDocumento": "SSI-IM-USG00-E00-1203"
+    }
+settings: {}
+order: 1000

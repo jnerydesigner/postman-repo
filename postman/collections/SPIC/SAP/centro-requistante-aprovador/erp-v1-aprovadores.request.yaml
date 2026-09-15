@@ -1,0 +1,212 @@
+$kind: http-request
+name: erp/v1/aprovadores
+url: https://api.spicbrasil.com.br/erp/v1/aprovadores
+method: GET
+headers:
+  client_id: b384e532-40c3-435b-9670-f935d774535c
+  Authorization: Bearer {{ACCESS_TOKEN}}
+scripts:
+  - type: afterResponse
+    code: |-
+      const aprovadoresResponse = pm.response.json();
+
+      const aprovadores = Array.isArray(aprovadoresResponse)
+          ? aprovadoresResponse
+          : aprovadoresResponse.aprovadores || aprovadoresResponse.data || [];
+
+      const headers = {
+          client_id: "b384e532-40c3-435b-9670-f935d774535c",
+          Authorization: `Bearer ${pm.environment.get("ACCESS_TOKEN")}`
+      };
+
+      const centrosCustoRequest = {
+          url: "https://api.spicbrasil.com.br/erp/v1/empresas/centros-custo",
+          method: "GET",
+          header: headers
+      };
+
+      const requisitantesRequest = {
+          url: "https://api.spicbrasil.com.br/erp/v1/requisitantes",
+          method: "GET",
+          header: headers
+      };
+
+      function normalizeArray(response, possibleFields = []) {
+          const data = response.json();
+
+          if (Array.isArray(data)) {
+              return data;
+          }
+
+          for (const field of possibleFields) {
+              if (Array.isArray(data[field])) {
+                  return data[field];
+              }
+          }
+
+          return [];
+      }
+
+      pm.sendRequest(centrosCustoRequest, function (centrosError, centrosResponse) {
+          if (centrosError) {
+              console.error("Erro ao buscar centros de custo:", centrosError);
+              return;
+          }
+
+          if (centrosResponse.code < 200 || centrosResponse.code >= 300) {
+              console.error(
+                  "Erro HTTP ao buscar centros de custo:",
+                  centrosResponse.code,
+                  centrosResponse.text()
+              );
+              return;
+          }
+
+          const centrosCusto = normalizeArray(centrosResponse, [
+              "centrosCusto",
+              "centros_custo",
+              "data"
+          ]);
+
+          pm.sendRequest(
+              requisitantesRequest,
+              function (requisitantesError, requisitantesResponse) {
+                  if (requisitantesError) {
+                      console.error(
+                          "Erro ao buscar requisitantes:",
+                          requisitantesError
+                      );
+                      return;
+                  }
+
+                  if (
+                      requisitantesResponse.code < 200 ||
+                      requisitantesResponse.code >= 300
+                  ) {
+                      console.error(
+                          "Erro HTTP ao buscar requisitantes:",
+                          requisitantesResponse.code,
+                          requisitantesResponse.text()
+                      );
+                      return;
+                  }
+
+                  const requisitantes = normalizeArray(requisitantesResponse, [
+                      "requisitantes",
+                      "data"
+                  ]);
+
+                  /*
+                   * Agrupa aprovadores pelo código do requisitante.
+                   *
+                   * Exemplo:
+                   * {
+                   *   FIN0001: [
+                   *     {
+                   *       requisitante: "FIN0001",
+                   *       departamento: "...",
+                   *       aprovador: "..."
+                   *     }
+                   *   ]
+                   * }
+                   */
+                  const aprovadoresPorRequisitante = aprovadores.reduce(
+                      (accumulator, aprovador) => {
+                          const codigoRequisitante = String(
+                              aprovador.requisitante || ""
+                          ).trim();
+
+                          if (!codigoRequisitante) {
+                              return accumulator;
+                          }
+
+                          if (!accumulator[codigoRequisitante]) {
+                              accumulator[codigoRequisitante] = [];
+                          }
+
+                          accumulator[codigoRequisitante].push(aprovador);
+
+                          return accumulator;
+                      },
+                      {}
+                  );
+
+                  /*
+                   * Agrupa requisitantes pelo código do centro de custo.
+                   *
+                   * Exemplo:
+                   * {
+                   *   "0032103207": [
+                   *     {
+                   *       centroCusto: "0032103207",
+                   *       requisitante: "FIN0001"
+                   *     }
+                   *   ]
+                   * }
+                   */
+                  const requisitantesPorCentroCusto = requisitantes.reduce(
+                      (accumulator, requisitante) => {
+                          const codigoCentroCusto = String(
+                              requisitante.centroCusto ||
+                                  requisitante.idSapCentroCusto ||
+                                  requisitante.centro_custo ||
+                                  ""
+                          ).trim();
+
+                          if (!codigoCentroCusto) {
+                              return accumulator;
+                          }
+
+                          const codigoRequisitante = String(
+                              requisitante.requisitante || ""
+                          ).trim();
+
+                          const requisitanteFormatado = {
+                              ...requisitante,
+                              aprovadores:
+                                  aprovadoresPorRequisitante[codigoRequisitante] || []
+                          };
+
+                          if (!accumulator[codigoCentroCusto]) {
+                              accumulator[codigoCentroCusto] = [];
+                          }
+
+                          accumulator[codigoCentroCusto].push(
+                              requisitanteFormatado
+                          );
+
+                          return accumulator;
+                      },
+                      {}
+                  );
+
+                  const resultado = {
+                      centrosCusto: centrosCusto.map(centroCusto => {
+                          const codigoCentroCusto = String(
+                              centroCusto.idSapCentroCusto || ""
+                          ).trim();
+
+                          return {
+                              ...centroCusto,
+                              requisitantes:
+                                  requisitantesPorCentroCusto[codigoCentroCusto] || []
+                          };
+                      })
+                  };
+
+                  pm.collectionVariables.set(
+                      "merged_data",
+                      JSON.stringify(resultado)
+                  );
+
+                  console.log("Dados agrupados:", resultado);
+                  console.log(
+                      "Dados agrupados em JSON:",
+                      JSON.stringify(resultado, null, 2)
+                  );
+              }
+          );
+      });
+    language: text/javascript
+settings: {}
+order: 3000

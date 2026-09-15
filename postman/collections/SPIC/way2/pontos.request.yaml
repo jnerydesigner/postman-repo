@@ -1,0 +1,42 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/way2/pontos?ids=5954&grandezas=EneatRec&contextodasdatas=ConsiderarDiaCheio&medicao-datainicio=2010-01-01T00:00:00&medicao-datafim=2010-03-31T23:59:59
+method: GET
+queryParams:
+  - key: ids
+    value: "5954"
+  - key: grandezas
+    value: EneatRec
+  - key: contextodasdatas
+    value: ConsiderarDiaCheio
+  - key: intervalo
+    value: ConsiderarTudo
+    disabled: true
+  - key: aplicarhorariodeverao
+    value: "false"
+    disabled: true
+  - key: separardadoscomcpsemcp
+    value: "true"
+    disabled: true
+  - key: medicao-temporelativo
+    value: Ontem
+    disabled: true
+  - key: medicao-hasvalue
+    value: "true"
+    disabled: true
+  - key: medicao-datainicio
+    value: 2010-01-01T00:00:00
+  - key: medicao-datafim
+    value: 2010-03-31T23:59:59
+scripts:
+  - type: afterResponse
+    code: |-
+      const response = pm.response.json();
+
+      console.log(response)
+
+      const qtdDados = response.dados[0].valores.length;
+
+      console.log(qtdDados)
+    language: text/javascript
+settings: {}
+order: 3000

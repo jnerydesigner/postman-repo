@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{url_bff}}/chat/ask"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "question": "Pergunta do chat"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{access_token}}"
+settings: {}
+order: 2000

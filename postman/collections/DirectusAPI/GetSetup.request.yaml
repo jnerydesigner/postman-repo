@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/setup?fields=*,setup_items.*,setup_items.setup_items_id.*"
+method: GET
+queryParams:
+  fields: "*,setup_items.*,setup_items.setup_items_id.*"
+settings: {}
+order: 6000

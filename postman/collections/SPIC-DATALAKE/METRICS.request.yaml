@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{url_base_keycloak}}/admin/realms/{{keycloak_realm}}/users?first=0&max=10"
+method: GET
+headers:
+  Content-Type: application/x-www-form-urlencoded
+queryParams:
+  first: "0"
+  max: "10"
+body:
+  type: urlencoded
+auth:
+  type: bearer
+  credentials:
+    token: "{{ACCESS_TOKEN_METRICS}}"
+settings: {}
+order: 12000

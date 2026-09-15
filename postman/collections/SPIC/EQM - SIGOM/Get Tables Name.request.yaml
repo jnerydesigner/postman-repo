@@ -1,0 +1,31 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/eqmdata/v1/table-names
+method: GET
+headers:
+  - key: client_id
+    value: c5ee2540-92ce-4d06-8dce-4c9ff9783b2e
+    disabled: true
+  - key: Authorization
+    value: Bearer {{ACCESS_TOKEN_SIGOM}}
+  - key: Authorization
+    value: Bearer ZTczNjIxODUtYmY4MS00NDY3LWI4YTItZjMxY2U0MDNjODI4OmU0NmMxMTc1LTFiNmMtNDMwNC04NGU5LWE2ZGViNmU3ZWYxNQ==
+    disabled: true
+  - key: Content-Type
+    value: application/json
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+      const count = jsonData.length;
+      const hourCall = Math.round(count / 3);
+
+      console.log("Total de tabelas retornadas: " + count);
+      console.log("Total calls in per day: "+ hourCall)
+
+      pm.test("Total de tabelas retornadas: " + count, function () {
+          pm.expect(jsonData).to.be.an('array');
+          pm.expect(count).to.be.above(0);
+      });
+    language: text/javascript
+settings: {}
+order: 7000

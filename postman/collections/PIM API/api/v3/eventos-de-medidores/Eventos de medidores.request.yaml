@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/eventos-de-medidores?periodo-datainicio=1951-09-26T19:37:36.816Z&periodo-datafim=1951-09-26T19:37:36.816Z&periodo-temporelativo=MesPassado&periodo-hasvalue=true&tipodeevento=DesbalancoTensao&pontoids=string&numerosdeserie=string&skip=5345&take=5345&sortingproperty=NumeroDeSerie&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  periodo-datainicio: 1951-09-26T19:37:36.816Z
+  periodo-datafim: 1951-09-26T19:37:36.816Z
+  periodo-temporelativo: MesPassado
+  periodo-hasvalue: "true"
+  tipodeevento: DesbalancoTensao
+  pontoids: string
+  numerosdeserie: string
+  skip: "5345"
+  take: "5345"
+  sortingproperty: NumeroDeSerie
+  sorting: Desc
+settings: {}
+examples: ./.resources/Eventos de medidores.resources/examples
+order: 1000

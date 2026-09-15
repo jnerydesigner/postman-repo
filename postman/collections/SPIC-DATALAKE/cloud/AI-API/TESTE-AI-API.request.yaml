@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://177.71.114.138:8300/orchestrate
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "input": "teste"
+    }
+settings: {}
+order: 1000

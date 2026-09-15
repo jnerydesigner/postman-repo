@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/login"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "password": "string",
+      "username": "string",
+      "requirePermissions": false
+    }
+settings: {}
+examples: ./.resources/Retorna usuário com base em seu login e senha.resources/examples
+order: 1000

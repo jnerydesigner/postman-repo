@@ -1,0 +1,107 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/faturas?pontonome=string&unidadeconsumidoranome=string&faturaautomatica=true&faturaconsolidada=true&possuialarmes=true&geracao-datainicio=1951-09-26T19:37:36.816Z&geracao-datafim=1951-09-26T19:37:36.816Z&geracao-temporelativo=MesPassado&geracao-hasvalue=true&fatura-datainicio=1951-09-26T19:37:36.816Z&fatura-datafim=1951-09-26T19:37:36.816Z&fatura-temporelativo=MesPassado&fatura-hasvalue=true&skip=5345&take=5345&sortingproperty=FaturaId&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    pontonome: string
+    unidadeconsumidoranome: string
+    faturaautomatica: "true"
+    faturaconsolidada: "true"
+    possuialarmes: "true"
+    geracao-datainicio: 1951-09-26T19:37:36.816Z
+    geracao-datafim: 1951-09-26T19:37:36.816Z
+    geracao-temporelativo: MesPassado
+    geracao-hasvalue: "true"
+    fatura-datainicio: 1951-09-26T19:37:36.816Z
+    fatura-datafim: 1951-09-26T19:37:36.816Z
+    fatura-temporelativo: MesPassado
+    fatura-hasvalue: "true"
+    skip: "5345"
+    take: "5345"
+    sortingproperty: FaturaId
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 7827,
+        "take": 1220,
+        "sorting": "string",
+        "rows": 3742,
+        "items": [
+          {
+            "faturaId": 4769,
+            "unidadeConsumidoraNome": "string",
+            "pontoNome": "string",
+            "pontoTipo": "string",
+            "pontoVirtual": false,
+            "dataInicio": "2003-03-12T23:22:31.735Z",
+            "dataFim": "1962-03-19T06:51:50.610Z",
+            "dataGeracao": "1997-10-20T08:58:07.938Z",
+            "faturaAutomatica": true,
+            "faturaConsolidada": false,
+            "possuiAlarmes": true,
+            "agenteDeMedicaoId": 3475,
+            "agenteDeMedicaoNome": "string",
+            "valores": [
+              {
+                "item": "DemandaReativaIndutiva",
+                "valorPonta": 7772.984303372757,
+                "valorForaPonta": 1996.608869645584,
+                "valorReservado": 9979.308948925394,
+                "valorTotal": 2905.6095182363806
+              },
+              {
+                "item": "Dmcr",
+                "valorPonta": 8540.134233578483,
+                "valorForaPonta": 1284.4733602105052,
+                "valorReservado": 7677.115607415714,
+                "valorTotal": 9082.425423690162
+              }
+            ]
+          },
+          {
+            "faturaId": 9140,
+            "unidadeConsumidoraNome": "string",
+            "pontoNome": "string",
+            "pontoTipo": "string",
+            "pontoVirtual": false,
+            "dataInicio": "1971-10-10T06:32:49.504Z",
+            "dataFim": "2010-04-18T21:07:12.765Z",
+            "dataGeracao": "1957-01-14T11:10:39.584Z",
+            "faturaAutomatica": false,
+            "faturaConsolidada": true,
+            "possuiAlarmes": true,
+            "agenteDeMedicaoId": 8916,
+            "agenteDeMedicaoNome": "string",
+            "valores": [
+              {
+                "item": "DemandaMaximaReativa",
+                "valorPonta": 806.3380823660493,
+                "valorForaPonta": 84.25787749548164,
+                "valorReservado": 1568.3286475283765,
+                "valorTotal": 9080.270461100426
+              },
+              {
+                "item": "Ufer",
+                "valorPonta": 7225.158178424518,
+                "valorForaPonta": 8076.752040863349,
+                "valorReservado": 3975.9567062182864,
+                "valorTotal": 523.5860799877346
+              }
+            ]
+          }
+        ]
+      }
+order: 1000

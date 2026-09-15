@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:4444/tasks/c97936ea-cab4-4800-b19b-0708d20b057b
+method: DELETE
+body:
+  type: json
+  content: |-
+    {
+        "title": "Arrumar a cadeira gamer para hoje"
+    }
+auth:
+  type: noauth
+settings: {}
+order: 11000

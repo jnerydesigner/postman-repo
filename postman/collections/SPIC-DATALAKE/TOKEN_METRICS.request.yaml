@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{url_base_keycloak}}/realms/{{keycloak_realm}}/protocol/openid-connect/token"
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    grant_type: client_credentials
+    client_id: "{{keycloak_metrics_client_id}}"
+    client_secret: "{{keycloak_metrics_client_secret}}"
+scripts:
+  - type: afterResponse
+    code: |
+      const response = pm.response.json();
+
+      // salva access_token
+      pm.environment.set("ACCESS_TOKEN_METRICS", response.access_token);
+    language: text/javascript
+settings: {}
+order: 11000

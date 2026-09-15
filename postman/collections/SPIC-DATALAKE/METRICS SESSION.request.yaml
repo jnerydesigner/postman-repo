@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{url_base_keycloak}}/admin/realms/{{keycloak_realm}}/client-session-stats"
+method: GET
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+auth:
+  type: bearer
+  credentials:
+    token: "{{ACCESS_TOKEN_METRICS}}"
+settings: {}
+order: 13000

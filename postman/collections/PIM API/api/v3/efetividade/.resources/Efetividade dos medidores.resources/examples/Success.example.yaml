@@ -1,0 +1,70 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/efetividade?ocorrencia-datainicio=1951-09-26T19:37:36.816Z&ocorrencia-datafim=1951-09-26T19:37:36.816Z&ocorrencia-temporelativo=MesPassado&ocorrencia-hasvalue=true&pasta=string&path=string&skip=5345&take=5345&sortingproperty=DataUltimaVerificacao&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    ocorrencia-datainicio: 1951-09-26T19:37:36.816Z
+    ocorrencia-datafim: 1951-09-26T19:37:36.816Z
+    ocorrencia-temporelativo: MesPassado
+    ocorrencia-hasvalue: "true"
+    pasta: string
+    path: string
+    skip: "5345"
+    take: "5345"
+    sortingproperty: DataUltimaVerificacao
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 6682,
+        "take": 2385,
+        "sorting": "string",
+        "rows": 8281,
+        "items": [
+          {
+            "id": 7898,
+            "medidorId": 464,
+            "nomeDoMedidor": "string",
+            "ocorrencia": "1978-05-01T17:08:02.419Z",
+            "menorDataDeColeta": "2002-04-15T02:50:10.143Z",
+            "dataUltimaVerificacao": "2001-04-08T15:30:56.568Z",
+            "dataHoraUltimaColeta": "1987-10-17T22:53:53.393Z",
+            "tipoDeMedidor": "string",
+            "tipoDoPonto": "string",
+            "efetividade": false,
+            "tags": [
+              "string",
+              "string"
+            ]
+          },
+          {
+            "id": 258,
+            "medidorId": 9143,
+            "nomeDoMedidor": "string",
+            "ocorrencia": "2009-03-17T13:21:37.570Z",
+            "menorDataDeColeta": "1990-09-09T13:27:30.834Z",
+            "dataUltimaVerificacao": "2026-04-09T14:41:59.832Z",
+            "dataHoraUltimaColeta": "1991-05-17T22:53:37.098Z",
+            "tipoDeMedidor": "string",
+            "tipoDoPonto": "string",
+            "efetividade": false,
+            "tags": [
+              "string",
+              "string"
+            ]
+          }
+        ]
+      }
+order: 1000

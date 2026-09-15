@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://177.71.114.138:4442/chat/ask
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "question":"me fale sobre o sistema"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{access_token}}"
+settings: {}
+order: 2000

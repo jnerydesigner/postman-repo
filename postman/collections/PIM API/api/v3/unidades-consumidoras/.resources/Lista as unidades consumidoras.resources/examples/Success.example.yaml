@@ -1,0 +1,118 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/unidades-consumidoras?ucnumeros=string&ucids=string&skip=5345&take=5345&sortingproperty=AgenteDeMedicaoNome&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    ucnumeros: string
+    ucids: string
+    skip: "5345"
+    take: "5345"
+    sortingproperty: AgenteDeMedicaoNome
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 8217,
+        "take": 8119,
+        "sorting": "string",
+        "rows": 3901,
+        "items": [
+          {
+            "unidadeConsumidoraId": 3512,
+            "nome": "string",
+            "endereco": {
+              "logradouro": "string",
+              "numero": "string",
+              "complemento": "string"
+            },
+            "agenteDeMedicaoId": 9222,
+            "agenteDeMedicaoNome": "string",
+            "postoTarifario": {
+              "nome": "string",
+              "horarios": [
+                {
+                  "tipo": "HorarioForaPonta",
+                  "inicio": "2017-05-02T06:49:25.433Z",
+                  "fim": "1947-05-20T00:23:51.522Z",
+                  "segunda": false,
+                  "terca": false,
+                  "quarta": false,
+                  "quinta": true,
+                  "sexta": false,
+                  "sabado": false,
+                  "domingo": true,
+                  "feriado": false
+                },
+                {
+                  "tipo": "HorarioReservado",
+                  "inicio": "1983-04-13T09:38:12.693Z",
+                  "fim": "1964-02-18T00:11:36.556Z",
+                  "segunda": true,
+                  "terca": true,
+                  "quarta": false,
+                  "quinta": true,
+                  "sexta": false,
+                  "sabado": false,
+                  "domingo": false,
+                  "feriado": false
+                }
+              ]
+            }
+          },
+          {
+            "unidadeConsumidoraId": 1676,
+            "nome": "string",
+            "endereco": {
+              "logradouro": "string",
+              "numero": "string",
+              "complemento": "string"
+            },
+            "agenteDeMedicaoId": 610,
+            "agenteDeMedicaoNome": "string",
+            "postoTarifario": {
+              "nome": "string",
+              "horarios": [
+                {
+                  "tipo": "HorarioCapacitivo",
+                  "inicio": "1979-08-03T02:11:25.539Z",
+                  "fim": "2021-03-16T15:44:03.967Z",
+                  "segunda": true,
+                  "terca": true,
+                  "quarta": true,
+                  "quinta": false,
+                  "sexta": false,
+                  "sabado": true,
+                  "domingo": true,
+                  "feriado": false
+                },
+                {
+                  "tipo": "HorarioForaPonta",
+                  "inicio": "1993-11-13T15:10:30.544Z",
+                  "fim": "1988-03-16T08:47:10.144Z",
+                  "segunda": true,
+                  "terca": true,
+                  "quarta": false,
+                  "quinta": true,
+                  "sexta": false,
+                  "sabado": true,
+                  "domingo": false,
+                  "feriado": false
+                }
+              ]
+            }
+          }
+        ]
+      }
+order: 1000

@@ -1,0 +1,68 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/relatorio-adc/:mes"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    mes: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "mes": "1994-09-21T13:38:03.624Z",
+        "pontos": [
+          {
+            "pontoId": 6416,
+            "pontoNome": "string",
+            "pontoTipo": "string",
+            "ehVirtual": true,
+            "mWh": 5127.495482747438,
+            "mwCoincidente": 4924.485718414626,
+            "mwMaxima": 3722.109290325284,
+            "mwMinima": 9906.254509410379,
+            "mwMedia": 5417.137164439998,
+            "dataHoraMWMaxima": "2014-11-25T10:18:06.149Z",
+            "mwForaPonta": 4377.562669138302,
+            "mwPonta": 5801.23632193968,
+            "varCargaMes": 7375.762059963778,
+            "varCargaAno": 9921.229946408985,
+            "completo": false,
+            "fatorDePotenciaMwMinima": 2468.164293510937,
+            "fatorDePotenciaMwPonta": 766.5070415998354,
+            "fatorDePotenciaMwForaPonta": 8988.390576610624,
+            "fatorDePotenciaMwCoincidente": 9814.985215307346
+          },
+          {
+            "pontoId": 661,
+            "pontoNome": "string",
+            "pontoTipo": "string",
+            "ehVirtual": false,
+            "mWh": 7834.694114720646,
+            "mwCoincidente": 9624.721611292865,
+            "mwMaxima": 2627.177587705349,
+            "mwMinima": 613.2729733719544,
+            "mwMedia": 8865.826287974194,
+            "dataHoraMWMaxima": "1957-10-23T11:32:40.726Z",
+            "mwForaPonta": 9677.138300961265,
+            "mwPonta": 4068.4994860671586,
+            "varCargaMes": 3821.9823253966665,
+            "varCargaAno": 3438.9034514732075,
+            "completo": true,
+            "fatorDePotenciaMwMinima": 4853.897725257945,
+            "fatorDePotenciaMwPonta": 3811.048735900431,
+            "fatorDePotenciaMwForaPonta": 5967.57094346996,
+            "fatorDePotenciaMwCoincidente": 3293.51613101186
+          }
+        ]
+      }
+order: 1000

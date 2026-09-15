@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/medidores/:numerodeserie/parametros-comunicacao?pasta=string&path=string"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    pasta: string
+    path: string
+  pathVariables:
+    numerodeserie: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "numeroDeSerie": "string",
+        "porta": "string",
+        "enderecoIP": "string",
+        "id": "string"
+      }
+order: 1000

@@ -1,0 +1,25 @@
+name: SENSEDIA_TK
+values:
+  - key: ACCESS_TOKEN
+    value: ''
+  - key: URL_BASE
+    value: ''
+  - key: ACCESS_TOKEN_SIGOM
+    value: ''
+  - key: TOKEN
+    value: ''
+  - key: TOKEN_SE_SUITE
+    value: ''
+  - key: token
+    value: ''
+  - key: type
+    value: ''
+  - key: expires
+    value: ''
+  - key: ACCESS_TOKEN_SE_SUITE
+    value: ''
+  - key: ACESS_TOKEN_WAY2
+    value: ''
+  - key: ACCESS_TOKEN_SAP
+    value: ''
+color: 0

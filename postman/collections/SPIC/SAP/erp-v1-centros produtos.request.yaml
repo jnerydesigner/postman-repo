@@ -1,0 +1,42 @@
+$kind: http-request
+name: erp/v1/centros produtos
+url: https://api.spicbrasil.com.br/erp/v1/centros/produtos?$skip=0&$top=1
+method: GET
+headers:
+  client_id: b384e532-40c3-435b-9670-f935d774535c
+  Authorization: Bearer {{ACCESS_TOKEN}}
+queryParams:
+  $skip: "0"
+  $top: "1"
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+
+      const qtdCentro = jsonData.centros.length;
+
+      const pd = jsonData.centros.find(
+          centro => centro.idSap === "3001"
+      );
+
+      const tot = pd?.produtos?.length ?? 0;
+
+      console.log("Total de centros:", qtdCentro);
+
+      const resumo = jsonData.centros.map((centro) => {
+          return {
+              nome: centro.nome,
+              idSap: centro.idSapCentro,
+              totalProdutos: centro.produtos.length
+          };
+      });
+
+      const totalProdutos = resumo.reduce((total, centro) => {
+          return total + centro.totalProdutos;
+      }, 0);
+
+      console.log("Resumo por centro:", resumo);
+      console.log("Total de Produtos:", totalProdutos);
+    language: text/javascript
+settings: {}
+order: 22000

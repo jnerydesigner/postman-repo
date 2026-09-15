@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/unidades-consumidoras?ucnumeros=string&ucids=string&skip=5345&take=5345&sortingproperty=AgenteDeMedicaoNome&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ucnumeros: string
+  ucids: string
+  skip: "5345"
+  take: "5345"
+  sortingproperty: AgenteDeMedicaoNome
+  sorting: Desc
+settings: {}
+examples: ./.resources/Lista as unidades consumidoras.resources/examples
+order: 1000

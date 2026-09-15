@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/agendamentos-de-comando?skip=5345&take=5345&sortingproperty=UltimaExecucao&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    skip: "5345"
+    take: "5345"
+    sortingproperty: UltimaExecucao
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 5253,
+        "take": 8433,
+        "sorting": "string",
+        "rows": 5350,
+        "items": [
+          {
+            "id": 9732,
+            "descricao": "string",
+            "ultimaExecucao": "2000-07-03T00:52:54.662Z",
+            "proximaExecucao": "2005-04-26T13:13:57.094Z"
+          },
+          {
+            "id": 6037,
+            "descricao": "string",
+            "ultimaExecucao": "2017-03-13T11:34:45.649Z",
+            "proximaExecucao": "1952-09-28T16:07:16.727Z"
+          }
+        ]
+      }
+order: 1000

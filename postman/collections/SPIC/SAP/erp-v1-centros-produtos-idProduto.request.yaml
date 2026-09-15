@@ -1,0 +1,10 @@
+$kind: http-request
+name: erp/v1/centros/produtos/idProduto
+url: https://api.spicbrasil.com.br/erp/v1/produtos/10000001
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{ACCESS_TOKEN}}"
+settings: {}
+order: 11000

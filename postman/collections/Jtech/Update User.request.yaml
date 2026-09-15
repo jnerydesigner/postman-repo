@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:4444/users/947bff6d-b13e-4972-ac5e-8e614a22ba23
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+        "name": "Jander da Costa Nery"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{authToken}}"
+settings: {}
+order: 5000

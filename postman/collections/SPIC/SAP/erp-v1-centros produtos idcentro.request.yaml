@@ -1,0 +1,19 @@
+$kind: http-request
+name: erp/v1/centros produtos idcentro
+url: https://api.spicbrasil.com.br/erp/v1/centros/3000/produtos?$skip=0&$top=50000
+method: GET
+headers:
+  client_id: b384e532-40c3-435b-9670-f935d774535c
+  Authorization: Bearer {{ACCESS_TOKEN}}
+queryParams:
+  $skip: "0"
+  $top: "50000"
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+
+      console.log(jsonData.centros[0].produtos.length)
+    language: text/javascript
+settings: {}
+order: 24000

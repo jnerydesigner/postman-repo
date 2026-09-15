@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/tech_skill/4"
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+      "name": "Auditoria1",
+      "slug": "auditoria1"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+settings: {}
+order: 17000

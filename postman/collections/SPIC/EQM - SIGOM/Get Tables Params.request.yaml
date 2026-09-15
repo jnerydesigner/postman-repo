@@ -1,0 +1,29 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/eqmdata/v1/bi_pv_concessao/paging
+method: POST
+headers:
+  Authorization: Bearer {{ACCESS_TOKEN_SIGOM}}
+  Content-Type: application/json
+  skip: "0"
+  top: "400"
+body:
+  type: json
+  content: |-
+    {
+      "fieldNames": "*"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+      const count = jsonData.length;
+
+      console.log("Total de tabelas retornadas: " + count);
+
+      pm.test("Total de tabelas retornadas: " + count, function () {
+          pm.expect(jsonData).to.be.an('array');
+          pm.expect(count).to.be.above(0);
+      });
+    language: text/javascript
+settings: {}
+order: 8000

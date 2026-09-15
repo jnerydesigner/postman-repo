@@ -1,0 +1,21 @@
+name: WAY2
+color: null
+values:
+  - key: url_base
+    value: "{{url_base}}"
+    enabled: true
+  - key: token
+    enabled: true
+    secret: true
+  - key: access_token
+    value: ""
+    enabled: true
+  - key: token_type
+    value: ""
+    enabled: true
+  - key: expires_in
+    value: ""
+    enabled: true
+  - key: ""
+    value: ""
+    enabled: true

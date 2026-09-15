@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/experience?sort=-admission"
+method: GET
+queryParams:
+  sort: -admission
+settings: {}
+order: 11000

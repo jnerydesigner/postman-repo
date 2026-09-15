@@ -1,0 +1,15 @@
+name: Sendedia
+color: null
+values:
+  - key: token
+    value: ""
+    enabled: true
+  - key: type
+    value: ""
+    enabled: true
+  - key: expires
+    value: ""
+    enabled: true
+  - key: url_base
+    value: ""
+    enabled: true

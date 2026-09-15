@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/medidores?numerodeserie=string&pasta=string&path=string&skip=5345&take=5345&sortingproperty=QuantidadeDeElementos&sorting=Desc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  numerodeserie: string
+  pasta: string
+  path: string
+  skip: "5345"
+  take: "5345"
+  sortingproperty: QuantidadeDeElementos
+  sorting: Desc
+settings: {}
+examples: ./.resources/Lista os medidores do usuário.resources/examples
+order: 2000

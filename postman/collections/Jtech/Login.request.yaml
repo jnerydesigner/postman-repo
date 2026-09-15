@@ -1,0 +1,72 @@
+$kind: http-request
+url: http://localhost:4444/auth/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "email": "jander.webmaster@gmail.com",
+        "password": "123456"
+    }
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    code: |-
+      // Test 1: Verify response status is 200
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      // Test 2: Verify response is valid JSON
+      pm.test("Response is valid JSON", function () {
+          pm.response.to.be.json;
+      });
+
+      // Test 3: Verify all required fields are present and have correct types
+      pm.test("Response has 'id' field and it is a string", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("id");
+          pm.expect(jsonData.id).to.be.a("string");
+      });
+
+      pm.test("Response has 'name' field and it is a string", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("name");
+          pm.expect(jsonData.name).to.be.a("string");
+      });
+
+      pm.test("Response has 'email' field and it is a string", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("email");
+          pm.expect(jsonData.email).to.be.a("string");
+      });
+
+      pm.test("Response has 'token' field and it is a string", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("token");
+          pm.expect(jsonData.token).to.be.a("string");
+      });
+
+      // Test 4: Verify email in response matches request email
+      pm.test("Response email matches request email", function () {
+          const jsonData = pm.response.json();
+          const requestBody = JSON.parse(pm.request.body.raw);
+          pm.expect(jsonData.email).to.eql(requestBody.email);
+      });
+
+      // Test 5: Verify token is a non-empty string
+      pm.test("Token is a non-empty string", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData.token).to.be.a("string").and.not.empty;
+      });
+
+      // Extract and save token to environment variable
+      const responseData = pm.response.json();
+      if (responseData.token) {
+          pm.environment.set("authToken", responseData.token);
+          console.log("Token saved to environment variable 'authToken'");
+      }
+    language: text/javascript
+settings: {}
+order: 3000

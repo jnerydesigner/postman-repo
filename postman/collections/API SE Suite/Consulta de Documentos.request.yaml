@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://api-dev.spicbrasil.com.br/se-suite/v1/documentos/consultas
+method: POST
+headers:
+  Accept: "*/*"
+  Connection: keep-alive
+  Content-Type: application/json
+  Authorization: Bearer {{access_token}}
+body:
+  type: json
+  content: "{\r
+
+    \    \"categoria\": \"ADM DOC\"\r
+
+    }"
+settings: {}
+order: 1000

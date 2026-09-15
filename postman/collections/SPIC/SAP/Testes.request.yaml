@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/erp/v1/perfis/JOHN
+method: GET
+headers:
+  client_id: b384e532-40c3-435b-9670-f935d774535c
+  Authorization: Bearer {{ACCESS_TOKEN}}
+queryParams:
+  - key: $skip
+    value: "0"
+    disabled: true
+  - key: $top
+    value: "5000"
+    disabled: true
+settings: {}
+order: 25000

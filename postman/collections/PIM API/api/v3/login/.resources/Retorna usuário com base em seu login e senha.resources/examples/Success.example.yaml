@@ -1,0 +1,57 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/login"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  body:
+    type: json
+    content: |-
+      {
+        "password": "string",
+        "username": "string",
+        "requirePermissions": false
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": 5353,
+        "nome": "string",
+        "login": "string",
+        "email": "string",
+        "token": "string",
+        "perfil": "string",
+        "permissoes": [
+          {
+            "modulo": "string",
+            "entidade": "string",
+            "podeVizualizar": true,
+            "podeAlterar": false,
+            "podeCriar": true,
+            "podeRemover": true,
+            "podeExecutar": false
+          },
+          {
+            "modulo": "string",
+            "entidade": "string",
+            "podeVizualizar": false,
+            "podeAlterar": true,
+            "podeCriar": true,
+            "podeRemover": true,
+            "podeExecutar": false
+          }
+        ]
+      }
+order: 1000

@@ -1,0 +1,9 @@
+name: Directus
+color: null
+values:
+  - key: urlBaseDirectus
+    value: ""
+    enabled: true
+  - key: token
+    value: ""
+    enabled: true

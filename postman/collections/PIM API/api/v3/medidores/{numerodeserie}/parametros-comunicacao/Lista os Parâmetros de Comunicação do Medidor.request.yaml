@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/medidores/:numerodeserie/parametros-comunicacao?pasta=string&path=string"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  pasta: string
+  path: string
+pathVariables:
+  numerodeserie: string
+settings: {}
+examples: ./.resources/Lista os Parâmetros de Comunicação do Medidor.resources/examples
+order: 1000

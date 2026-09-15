@@ -1,0 +1,12 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/way2/parametros?skip=0&take=10
+method: GET
+queryParams:
+  skip: "0"
+  take: "10"
+auth:
+  type: bearer
+  credentials:
+    token: "{{ACESS_TOKEN_WAY2}}"
+settings: {}
+order: 7000

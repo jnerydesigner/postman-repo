@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/User?fields=*,user_resume.resume_id.*,user_resume.resume_id.resume_experience.experience_id.*&deep[user_resume][_sort]=resume_id&deep[resume_experience][_sort]=-experience_id.admission"
+method: GET
+queryParams:
+  fields: "*,user_resume.resume_id.*,user_resume.resume_id.resume_experience.experience_id.*"
+  deep[user_resume][_sort]: resume_id
+  deep[resume_experience][_sort]: -experience_id.admission
+settings: {}
+order: 8000

@@ -1,0 +1,30 @@
+$kind: http-request
+name: erp/v1/requisicoes-compra
+url: https://api.spicbrasil.com.br/erp/v1/status/requisicoes-compra/0080002493
+method: GET
+headers:
+  - key: client_id
+    value: b384e532-40c3-435b-9670-f935d774535c
+  - key: Authorization
+    value: Bearer {{ACCESS_TOKEN}}
+  - key: $skip
+    value: "0"
+    disabled: true
+  - key: $top
+    value: "10"
+    disabled: true
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+      const produtos = jsonData.centros[0].produtos;
+      const countProdutos = produtos.length; 
+
+      console.log('Total de registros em produtos (centros[0]):', countProdutos);
+
+      pm.test('Total de registros em produtos (centros[0]): ' + countProdutos, () => {
+          pm.expect(countProdutos).to.be.above(-1);
+      });
+    language: text/javascript
+settings: {}
+order: 1000

@@ -1,0 +1,40 @@
+$kind: http-request
+url: "{{URL_BASE}}/rfc-oauth/v1/access-token"
+method: POST
+headers:
+  - key: authorization
+    value: Basic ZTczNjIxODUtYmY4MS00NDY3LWI4YTItZjMxY2U0MDNjODI4OjkwOTNlNzRmLWQxZDktNDA1OC1iNjA3LWFlNTFlOGFjNDg2Zg==
+  - key: Content-Type
+    value: application/x-www-form-urlencoded
+  - key: client_id
+    value: 4bac08a7-d58f-4e6d-8c42-303297ed5109
+    disabled: true
+body:
+  type: urlencoded
+  content:
+    grant_type: client_credentials
+scripts:
+  - type: afterResponse
+    code: |+
+      const response = pm.response.json();
+
+      // salva access_token
+      pm.environment.set("ACCESS_TOKEN_SE_SUITE", response.access_token);
+
+      // Tests
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response has access_token", function () {
+          pm.expect(response.access_token).to.be.a("string").and.not.empty;
+      });
+
+      pm.test("ACCESS_TOKEN saved correctly in environment", function () {
+          const saved = pm.environment.get("ACCESS_TOKEN_SIGOM");
+          pm.expect(saved).to.eql(response.access_token);
+      });
+
+    language: text/javascript
+settings: {}
+order: 2000

@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/post?fields=*,blog.blog_id.*&page=1&limit=5&meta=filter_count&sort=-date_created"
+method: GET
+queryParams:
+  fields: "*,blog.blog_id.*"
+  page: "1"
+  limit: "5"
+  meta: filter_count
+  sort: -date_created
+settings: {}
+order: 2000

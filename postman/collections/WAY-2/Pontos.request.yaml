@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{url_base}}/way2/pontos?ids=5810%2C5767&grandezas=DematRec&contextodasdatas=ConsiderarDiaCheio&intervalo=TrintaMinutos&medicao-temporelativo=EsteMes"
+method: GET
+headers:
+  Accept: application/json
+  Authorization: ""
+queryParams:
+  ids: 5810%2C5767
+  grandezas: DematRec
+  contextodasdatas: ConsiderarDiaCheio
+  intervalo: TrintaMinutos
+  medicao-temporelativo: EsteMes
+settings: {}
+order: 1000

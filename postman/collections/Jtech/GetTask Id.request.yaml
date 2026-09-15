@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:4444/tasks/0bb23842-1515-4c0e-b96a-7e5fb76754cd
+method: GET
+body:
+  type: json
+  content: |-
+    {
+        "title": "Arrumar a cadeira gamer para hoje"
+    }
+auth:
+  type: noauth
+settings: {}
+order: 12000

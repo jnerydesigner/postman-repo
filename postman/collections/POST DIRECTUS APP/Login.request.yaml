@@ -1,0 +1,12 @@
+$kind: http-request
+url: http://localhost:7060/auth/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "email": "jander.webmaster@gmail.com",
+      "password": "Jcn526379181005@#"
+    }
+settings: {}
+order: 1000

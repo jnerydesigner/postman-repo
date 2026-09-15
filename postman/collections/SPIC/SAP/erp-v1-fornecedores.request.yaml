@@ -1,0 +1,8 @@
+$kind: http-request
+name: erp/v1/fornecedores
+url: https://api.spicbrasil.com.br/erp/v1/fornecedores
+method: GET
+headers:
+  Authorization: Bearer {{ACCESS_TOKEN}}
+settings: {}
+order: 12000

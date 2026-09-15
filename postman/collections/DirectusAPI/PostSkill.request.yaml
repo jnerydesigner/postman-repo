@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{urlBaseDirectus}}/items/skills"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "name": "NodeJS"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+settings: {}
+order: 16000

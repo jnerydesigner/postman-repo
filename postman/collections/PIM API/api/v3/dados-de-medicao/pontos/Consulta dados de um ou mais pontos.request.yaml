@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v3/dados-de-medicao/pontos?ids=string&grandezas=string&contextodasdatas=ConsiderarMesCheio&intervalo=TrintaMinutos&aplicarhorariodeverao=true&separardadoscomcpsemcp=true&medicao-datainicio=1951-09-26T19:37:36.816Z&medicao-datafim=1951-09-26T19:37:36.816Z&medicao-temporelativo=MesPassado&medicao-hasvalue=true"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ids: string
+  grandezas: string
+  contextodasdatas: ConsiderarMesCheio
+  intervalo: TrintaMinutos
+  aplicarhorariodeverao: "true"
+  separardadoscomcpsemcp: "true"
+  medicao-datainicio: 1951-09-26T19:37:36.816Z
+  medicao-datafim: 1951-09-26T19:37:36.816Z
+  medicao-temporelativo: MesPassado
+  medicao-hasvalue: "true"
+settings: {}
+examples: ./.resources/Consulta dados de um ou mais pontos.resources/examples
+order: 1000

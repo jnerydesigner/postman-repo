@@ -1,0 +1,17 @@
+$kind: http-request
+name: erp/v1/usuarios
+url: https://api.spicbrasil.com.br/erp/v1/usuarios
+method: GET
+headers:
+  client_id: b384e532-40c3-435b-9670-f935d774535c
+  Authorization: Bearer {{ACCESS_TOKEN}}
+scripts:
+  - type: afterResponse
+    code: |-
+      const jsonData = pm.response.json();
+      // const qtdPerfs = jsonData.perfis.length;
+
+      console.log(jsonData)
+    language: text/javascript
+settings: {}
+order: 14000

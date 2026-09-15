@@ -1,0 +1,8 @@
+$kind: http-request
+url: https://api.spicbrasil.com.br/erp/v1/contratos/4600006275/itens
+method: GET
+headers:
+  access_token: Bearer YjM4NGU1MzItNDBjMy00MzViLTk2NzAtZjkzNWQ3NzQ1MzVjOjIxODAzOGRkLWM0YmMtNGYxZC1iZTBkLTMwYjA0MTVkNmJkYw==
+  client_id: b384e532-40c3-435b-9670-f935d774535c
+settings: {}
+order: 1000

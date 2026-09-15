@@ -1,0 +1,71 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v3/usinas?ceg=string&skip=5345&take=5345&sortingproperty=PontoLiquidaNome&sorting=Desc"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: PIM-Auth
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  queryParams:
+    ceg: string
+    skip: "5345"
+    take: "5345"
+    sortingproperty: PontoLiquidaNome
+    sorting: Desc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "skip": 2824,
+        "take": 409,
+        "sorting": "string",
+        "rows": 1139,
+        "items": [
+          {
+            "usinaId": 1533,
+            "nome": "string",
+            "usinaTipo": "Termica",
+            "descricao": "string",
+            "entradaEmOperacao": "2023-08-04T01:33:23.172Z",
+            "pontoLiquidaId": 5497,
+            "pontoLiquidaNome": "string",
+            "pontoGeracaoRecordId": 7889,
+            "pontoGeracaoRecordNome": "string",
+            "garantiaFisicaMWMedio": 4739.075614742887,
+            "geracaoRecord": 6064.2680547335885,
+            "dataHoraGeracaoRecord": "1973-04-13T23:04:43.337Z",
+            "ceg": "string",
+            "consumoInterno": 896.7249891613504,
+            "perdasEletricas": 6563.668350615677,
+            "teif": 2951.8323769868025,
+            "indisponibilidadeProgramada": 7959.089589406345
+          },
+          {
+            "usinaId": 8560,
+            "nome": "string",
+            "usinaTipo": "Termica",
+            "descricao": "string",
+            "entradaEmOperacao": "2008-10-16T07:02:38.631Z",
+            "pontoLiquidaId": 3113,
+            "pontoLiquidaNome": "string",
+            "pontoGeracaoRecordId": 6226,
+            "pontoGeracaoRecordNome": "string",
+            "garantiaFisicaMWMedio": 3389.2017205361412,
+            "geracaoRecord": 5896.787274934825,
+            "dataHoraGeracaoRecord": "1975-09-23T18:26:57.263Z",
+            "ceg": "string",
+            "consumoInterno": 4701.198771357857,
+            "perdasEletricas": 5505.175902987023,
+            "teif": 2682.5814109318903,
+            "indisponibilidadeProgramada": 4410.519693842268
+          }
+        ]
+      }
+order: 1000
