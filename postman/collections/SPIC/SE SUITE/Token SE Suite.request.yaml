@@ -3,10 +3,11 @@ url: "{{URL_BASE}}/rfc-oauth/v1/access-token"
 method: POST
 headers:
   - key: authorization
-    value: Basic
-      ZTczNjIxODUtYmY4MS00NDY3LWI4YTItZjMxY2U0MDNjODI4OjkwOTNlNzRmLWQxZDktNDA1OC1iNjA3LWFlNTFlOGFjNDg2Zg==
+    value: "{{BASIC_SE_SUITE}}"
+    disabled: false
   - key: Content-Type
     value: application/x-www-form-urlencoded
+    disabled: false
   - key: client_id
     value: 4bac08a7-d58f-4e6d-8c42-303297ed5109
     disabled: true

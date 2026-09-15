@@ -2,7 +2,7 @@ $kind: http-request
 url: https://api.spicbrasil.com.br/se-suite/v1/documentos/downloads
 method: POST
 headers:
-  Authorization: Bearer {{TOKEN_SE_SUITE}}
+  Authorization: Bearer {{ACCESS_TOKEN_SE_SUITE}}
 body:
   type: json
   content: |-

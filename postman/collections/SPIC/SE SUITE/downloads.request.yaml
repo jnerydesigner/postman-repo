@@ -1,17 +1,6 @@
 $kind: http-request
 url: https://api.spicbrasil.com.br/se-suite/v1/documentos/downloads
 method: POST
-headers:
-  - key: authorization
-    value: Basic
-      ZTczNjIxODUtYmY4MS00NDY3LWI4YTItZjMxY2U0MDNjODI4OjkwOTNlNzRmLWQxZDktNDA1OC1iNjA3LWFlNTFlOGFjNDg2Zg==
-    disabled: true
-  - key: Content-Type
-    value: application/x-www-form-urlencoded
-    disabled: true
-  - key: client_id
-    value: 4bac08a7-d58f-4e6d-8c42-303297ed5109
-    disabled: true
 body:
   type: json
   content: |-

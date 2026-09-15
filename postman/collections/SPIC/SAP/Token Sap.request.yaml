@@ -2,7 +2,7 @@ $kind: http-request
 url: "{{URL_BASE}}/rfc-oauth/v1/access-token"
 method: POST
 headers:
-  authorization: Basic YjM4NGU1MzItNDBjMy00MzViLTk2NzAtZjkzNWQ3NzQ1MzVjOmNiNmFiZWEwLTk1NjItNGFkMy1hN2Q3LWJjZTljZTM0OTQ5MA==
+  authorization: Basic {{BASIC_SAP}}
   Content-Type: application/x-www-form-urlencoded
 body:
   type: urlencoded
